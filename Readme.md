@@ -1,1 +1,1 @@
-This is a repository for a church website.
+This is a repository for a church website hosted on GitHub pages.
