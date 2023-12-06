@@ -1,0 +1,245 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    height: 50px;
+    background-color: #230c4c;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    float: left;
+    margin-left: 20px;
+    width: 50px;
+}
+
+header h1,
+header h2 {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+}
+
+header h1 {
+    margin-top: 0;
+    float: left;
+    width: auto;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    color: #feffff;
+}
+
+
+header h2 {
+    margin-bottom: 0px;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #e7e5f579;
+}
+
+header nav {
+    margin-top: 0;
+    margin-left: auto; /* Aligns the nav to the right */
+    margin-right: 20px;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav a {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: #feffff;
+    text-decoration: none;
+}
+
+#ValProp {
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+#VisMis {
+    height: 100%;
+    width: 100%;
+    /* background-color: #00000000; */
+    background: linear-gradient(to right, #000000 20%, rgba(134, 132, 132, 0.267));
+    position: relative;
+    z-index: 2; /* Higher z-index to make it appear on top */
+}
+
+@keyframes slideInh2 {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+#VisMis h2 {
+    animation: slideInh2 5s ease-in-out;
+    /* animation-delay: 10s; */
+    align-items: left;
+    justify-content: left;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1;
+    color: #410da9;
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 50px;
+}
+
+@keyframes slideInp {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+#VisMis p {
+    animation: slideInp 3s ease-in-out;
+    width: 28%;
+    align-items: left;
+    justify-content: left;
+    font-family: serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Roboto;
+    line-height: 1.5;
+    color: #ffffff98;
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: 10px;
+    background: rgba(73, 74, 75, 0.2);
+    border-radius: 10px;
+    /* backdrop-filter: blur(10px); */
+}
+
+button {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: #feffff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #360a6b;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #27ab2d;
+}
+
+#Programs {
+    background: linear-gradient(to right, #1c56a297 50%, rgba(3, 255, 255, 0.267));
+    width: 100%;
+}
+
+#Programs h2 {
+    display: block;
+    margin-top: px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: 700;
+    text-shadow: #000000 2px 2px 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+    color: #410da9;
+    text-align: center;
+    padding-top: 20px, 0, 20px 0;
+    margin-left: 20px;
+}
+
+#ProgramsDiv {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;    
+}
+
+.Progtab {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    /* border: 1px solid #1d1c1c;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f3f8f8; */
+}
+
+.Progtab h3 {
+    margin-top: 0;
+    color: #410da9;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: #000000 2px 2px 2px;
+}
+
+.Progtab p {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Roboto;
+}
