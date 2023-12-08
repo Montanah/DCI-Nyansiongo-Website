@@ -10,7 +10,7 @@ body {
 
 header {
     height: 50px;
-    background-color: #230c4c;
+    background: linear-gradient(to right, #230c4c 40%, #00000000, #230c4c);
     border-bottom: 1px solid #e5e5e5;
     padding: 20px 0;
     display: flex;
@@ -256,7 +256,8 @@ button:hover {
    
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to top, #04040497 40%, rgba(3, 255, 255, 0.267));
+    /* background-color: #000000; */
+    background: linear-gradient(to right, #98a9f3, #bdc1dd, #98a9f3, #d6d0f5);
     width: 100%;   
 }
 
@@ -286,6 +287,7 @@ button:hover {
     margin-left: 100px;
     width: 40%;
     font-size: 20px;
+    color: #000000;
     font-weight: bold;
     font-family: Roboto;
     text-align: center;
@@ -295,12 +297,12 @@ button:hover {
 #PstNames {
     display: block;
     width: 60%;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
     line-height: 1;
-    color: #000000;
+    color: #020202;
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
