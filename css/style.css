@@ -10,7 +10,7 @@ body {
 
 header {
     height: 50px;
-    background: linear-gradient(to right, #230c4c 40%, #00000000, #230c4c);
+    background: linear-gradient(to right, #230c4c, #000000);
     border-bottom: 1px solid #e5e5e5;
     padding: 20px 0;
     display: flex;
@@ -257,7 +257,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     /* background-color: #000000; */
-    background: linear-gradient(to right, #98a9f3, #bdc1dd, #98a9f3, #d6d0f5);
+    background: linear-gradient(to right, #c77dff, #bdc1dd, #98a9f3, #d6d0f5);
     width: 100%;   
 }
 
@@ -282,21 +282,37 @@ button:hover {
     width: 100%;    
 }
 
+#Pstpara {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-items: left;
+    justify-content: left;   
+}
+
 #Pastors p {
     margin-bottom: 0;
-    margin-left: 100px;
-    width: 40%;
-    font-size: 20px;
+    margin-left: 150px;
+    width: 60%;
+    font-size: 22px;
     color: #000000;
     font-weight: bold;
     font-family: Roboto;
+    font-style: italic;
     text-align: center;
     line-height: 1.5;
+    background:rgba(73, 74, 75, 0.2);;
+    border-radius: 50px 10px;
+    padding: 15px;
+    box-shadow: 5px, 5px, 5px #000000;
 }
 
 #PstNames {
     display: block;
-    width: 60%;
+    width: 30%;
     font-size: 20px;
     font-weight: 700;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -306,8 +322,8 @@ button:hover {
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 30px;
-    margin-left: 110px;
+    padding-top: 20px;
+    margin-left: 280px;
 
 }
 
@@ -320,6 +336,7 @@ button:hover {
     border: 1px solid #ffffff;
     box-shadow: 0px 0px 30px 0px #000000;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 footer {
