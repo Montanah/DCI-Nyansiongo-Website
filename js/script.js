@@ -7,3 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentIndex = (currentIndex + 1) % images.length;
     }, 5000);
 });
+
+const navigateToContact = () => {
+    document.getElementById("footerDiv3").scrollIntoView({ behavior: 'smooth' });
+}

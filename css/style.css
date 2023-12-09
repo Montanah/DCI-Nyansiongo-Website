@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -155,13 +159,13 @@ header nav a {
     margin-left: 25px;
     margin-top: 20px;
     margin-bottom: 0;
-    padding: 10px;
+    padding: 15px;
     background: rgba(73, 74, 75, 0.2);
-    border-radius: 10px;
+    border-radius: 50px 10px;
     /* backdrop-filter: blur(10px); */
 }
 
-button {
+#CTA-button {
     align-items: center;
     justify-content: center;
     margin-left: 100px;
@@ -173,16 +177,22 @@ button {
     color: #feffff;
     text-align: center;
     text-decoration: none;
-    background-color: #360a6b;
+    background-color:  #00a9ff;
     border: 1px solid #ffffff;
     border-radius: 50px;
     padding: 10px 20px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #27ab2d;
+#CTA-button a {
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: #040404 2px 2px 2px !important;
 }
+
+#CTA-button:hover {
+    background-color: #034afe;
+}   
 
 #Programs {
     background: linear-gradient(to top, #1c56a297 40%, rgba(3, 255, 255, 0.267));
@@ -314,12 +324,13 @@ button:hover {
 #PstNames {
     display: block;
     width: 30%;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Roboto;
     font-style: italic;
     line-height: 1;
     color: #020202;
+    text-shadow: #c106ff 2px 2px 2px;
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
@@ -341,23 +352,56 @@ button:hover {
 }
 
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     width: 100%;
     height: 80px;
     background-color: #000000;
     border-top: 1px solid #e5e5e5;
     padding: 20px 0;
-    align-items: center;
+}
+
+#footerDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #footerDiv1 {
-    width: 40%;
-    padding: 20px 0;
-    align-items: center;
-    justify-content: center;
-    margin-left: 20px;
+    width: 21%;
+    padding: px 0;
+    align-items: left;
+    justify-content: left;
+    margin-left: 0px;
+}
+
+#footerDiv h3,
+#footerDiv2 h3,
+#footerDiv3 h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: #feffff;
+    text-align: center;
+    /* align-items: center;
+    justify-content: center; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    text-shadow: #7a0484 2px 2px 2px;
+}
+
+#footerDiv1 p {
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Roboto;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.5;
+    color: #ffffff;
 }
 
 footer ul {
@@ -367,21 +411,30 @@ footer ul {
 }
 
 footer a {
-    margin-left: 20px;
-    font-size: 16px;
+    /* margin-left: 20px; */
+    font-size: 15px;
     font-weight: 700;
     line-height: 1;
     color: #feffff;
     text-decoration: none;
+    font-style: italic;
+    font-family: Roboto;
+    text-align: center;
+}
+
+footer a:hover {
+    color: #27ab2d;
 }
 
 footer p {
     margin-bottom: 0;
-    margin-right: 50px;
-    font-size: 20px;
+    /* margin-right: 50px; */
+    font-size: 15px;
     font-weight: bold;
     font-family: Roboto;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1;
     color: #ffffff;
+    font-family: Roboto;
+    font-style: italic;
 }
