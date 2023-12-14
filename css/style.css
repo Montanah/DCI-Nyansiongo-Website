@@ -161,11 +161,11 @@ header nav a {
     /* backdrop-filter: blur(10px); */
 }
 
-#CTA-button {
+.CTA-button {
     align-items: center;
     justify-content: center;
     margin-left: 100px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 0px;
     font-size: 16px;
     font-weight: 700;
@@ -181,8 +181,8 @@ header nav a {
     text-shadow: #040404 2px 2px 2px !important;
 }
 
-#CTA-button:hover {
-    background-color: #034afe;
+.CTA-button:hover {
+    background: #0342fe;
 }   
 
 #Programs {
@@ -400,7 +400,10 @@ header nav a {
 }
 
 #MapTxt {
+    display: flex;
+    flex-direction: row;
     height: 100%;
+    justify-content: space-evenly;
 }
 #MapHeader {
     display: flex;
@@ -431,7 +434,63 @@ header nav a {
 #map {
     /* flex: 1; */
     height: 100%;
-  }
+}
+
+#Textbox {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: left; */
+    /* align-items: left; */
+    background-color: #ffffff;
+    /* background: linear-gradient(to right, #c77dff, #bdc1dd, #98a9f3, #d6d0f5); */
+    width: 60%;
+
+}
+
+#Textbox h3 {
+    text-align: center;
+    margin-right: 110px;
+    font-style: italic;
+    text-shadow: #c106ff 1px 1px 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #999;
+    background-color: #f5f5f5; 
+    border-radius: 4px;
+} 
+
+label {
+    font-weight: bold;
+    text-align: left;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+textarea {
+    padding: 10px;
+    border: 1px solid #999;
+    background-color: #f5f5f5; 
+    border-radius: 4px;
+    resize: none;
+    height: 100px;
+}
+
+form button {
+    margin-right: 80px;
+}
 
 footer {
     width: 100%;
