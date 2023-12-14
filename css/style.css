@@ -288,7 +288,7 @@ header nav a {
     margin-bottom: 10px;
     font-size: 40px;
     font-weight: 700;
-    text-shadow: #ffffff 2px 1px 2px;
+    text-shadow: #ffffff 1px 1px 1px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
     line-height: 1;
@@ -426,14 +426,21 @@ header nav a {
     font-style: italic;
     line-height: 1;
     color: #070707;
-    text-align: left;
-    margin-left: 200px;
+    text-align: center;
+    margin-right: 70px;
     padding-top: 20px;
 }
 
 #map {
     /* flex: 1; */
     height: 100%;
+}
+
+iframe {
+    width: 90%;
+    height: 450px;
+    border: 1px solid #000000;
+    border-radius: 5px;
 }
 
 #Textbox {
@@ -486,6 +493,7 @@ textarea {
     border-radius: 4px;
     resize: none;
     height: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 form button {
@@ -587,3 +595,4 @@ footer p {
     font-family: Roboto;
     font-style: italic;
 }
+
