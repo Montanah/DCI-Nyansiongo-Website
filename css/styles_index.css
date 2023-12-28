@@ -10,6 +10,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-color: transparent;
 }
 
 header {
@@ -82,21 +83,24 @@ header nav a {
 #ValProp {
     height: 500px;
     width: 100%;
-    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    /* background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
     transition: all 0.5s ease-in-out;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; */
 }
 
 #VisMis {
+    flex: 1;
     height: 100%;
-    width: 100%;
+    width: 40%;
     /* background-color: #00000000; */
-    background: linear-gradient(to right, #000000 20%, rgba(134, 132, 132, 0.267));
+    background: linear-gradient(to right, #000000 80%, rgba(134, 132, 132, 0.267));
     position: relative;
-    z-index: 2; /* Higher z-index to make it appear on top */
+    z-index: 20; /* Higher z-index to make it appear on top */
 }
 
 @keyframes slideInh2 {
@@ -111,6 +115,7 @@ header nav a {
 }
 
 #VisMis h2 {
+    width: 100%;
     animation: slideInh2 5s ease-in-out;
     /* animation-delay: 10s; */
     align-items: left;
@@ -142,7 +147,7 @@ header nav a {
 
 #VisMis p {
     animation: slideInp 3s ease-in-out;
-    width: 28%;
+    width: 70%;
     align-items: left;
     justify-content: left;
     font-family: serif;
@@ -159,6 +164,19 @@ header nav a {
     background: rgba(73, 74, 75, 0.2);
     border-radius: 50px 10px;
     /* backdrop-filter: blur(10px); */
+}
+
+#ValPropImg {
+    height: 500px;
+    width: 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    z-index: -20; /* Lower z-index to make it appear behind */
 }
 
 .CTA-button {
