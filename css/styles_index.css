@@ -98,9 +98,9 @@ header nav a {
     height: 100%;
     width: 40%;
     /* background-color: #00000000; */
-    background: linear-gradient(to right, #000000 80%, rgba(134, 132, 132, 0.267));
+    /* background: linear-gradient(to right, #000000 80%, rgba(134, 132, 132, 0.267)); */
     position: relative;
-    z-index: 20; /* Higher z-index to make it appear on top */
+    z-index: 20;
 }
 
 @keyframes slideInh2 {
@@ -147,7 +147,7 @@ header nav a {
 
 #VisMis p {
     animation: slideInp 3s ease-in-out;
-    width: 70%;
+    width: 25%;
     align-items: left;
     justify-content: left;
     font-family: serif;
@@ -166,17 +166,29 @@ header nav a {
     /* backdrop-filter: blur(10px); */
 }
 
-#ValPropImg {
+#ValProp::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.267) 20%, #000000 80%);
+    z-index: -1;
+}
+
+#ValProp {
     height: 500px;
-    width: 60%;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
+    background-position: right;
     transition: all 0.5s ease-in-out;
     position: relative;
     overflow: hidden;
     border: none;
-    z-index: -20; /* Lower z-index to make it appear behind */
+    z-index: -20;
+    margin-left: -1px;
 }
 
 .CTA-button {
@@ -282,7 +294,7 @@ header nav a {
     /* width: 100%; */
     height: 400px;
     /* background-color: #ffffff; */
-    background: linear-gradient(to bottom, #000000 25%, #1a5f81 40%, #000000);
+    background: linear-gradient(to bottom, #000000, #1a5f81, #000000);
 
 }
 

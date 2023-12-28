@@ -5,14 +5,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var startIndex = 3; // Change this to start from a different image index
 
     // Set initial background
-    document.getElementById("ValPropImg").style.backgroundImage = "url(" + images[startIndex] + ")";
+    document.getElementById("ValProp").style.backgroundImage = "url(" + images[startIndex] + ")";
     currentIndex = (startIndex + 1) % images.length;
 
     // Apply smooth transition
-    document.getElementById("ValPropImg").style.transition = "background-image 1s ease-in-out";
+    document.getElementById("ValProp").style.transition = "background-image 1s ease-in-out";
 
     setInterval(function() {
-        document.getElementById("ValPropImg").style.backgroundImage = "url(" + images[currentIndex] + ")";
+        document.getElementById("ValProp").style.backgroundImage = "url(" + images[currentIndex] + ")";
         currentIndex = (currentIndex + 1) % images.length;
     }, 5000);
 });
