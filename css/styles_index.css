@@ -264,10 +264,6 @@ header nav a {
     animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-play-state: running;
-  }
-  
-
-.Progtab h3 {
     margin-top: 0;
     color: #410da9;
     font-size: 25px;
@@ -275,8 +271,8 @@ header nav a {
     line-height: 1;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: #000000 2px 2px 2px;
-}
-
+  }
+  
 .Progtab p {
     margin-bottom: 0;
     font-size: 20px;
@@ -627,3 +623,477 @@ footer p {
     font-style: italic;
 }
 
+/* Default Styles */
+body {
+    font-size: 16px;
+}
+/* Mobile */
+@media (max-width: 480px) {
+    header {
+        padding: 20px 0;
+    }
+
+    #titleh1 {
+        font-size: 10px;
+        margin-left: 5px;
+    }
+
+    #titleh2 {
+        font-size: 8px;
+        margin-left: 5px;
+    }
+
+    header img {
+        margin-left: 10px;
+        width: 40px;
+    }
+
+    header nav {
+        margin-right: 40px;
+    }
+
+    header nav a {
+        /* margin-left: 20px; */
+        font-size: 9px;
+        margin-left: auto; /* Aligns the nav to the right */
+        margin-right: 5px;
+    }
+
+    #VisMis h2 {
+        font-size: 20px;
+    }
+
+    #VisMis p {
+        width: 21%;
+        font-size: 10px;
+        border-radius: 15px 10px;
+        line-height: 1;
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #ValProp {
+        background-position: bottom;
+    }
+
+    .CTA-button {
+        margin-left: 30px;
+        margin-top: 50px;
+        font-size: 10px;
+    }
+
+    #Programs h2 {
+        font-size: 24px;
+    }
+
+    #ProgramsDiv {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* align-items: center; */
+        width: 100%;    
+    }
+
+    @keyframes slideh3 {
+        0% { transform: translateX(-10px); }
+        100% { transform: translateX(30px); }
+    }
+
+    .Progtab h3 {
+        width: 90%;
+        animation-name: slideh3;
+        font-size: 18px;
+        text-shadow: #000000 1px 1px 1px;
+    }
+
+    .Progtab {
+        flex: none;
+        margin: 0px;
+    }
+
+    .Progtab p {
+        font-size: 14px;
+    }
+
+    #VideoSection {
+        height: 600px;
+        flex-direction: column;
+    }
+
+    #Video {
+        width: 100%;
+        height: 50%;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    #Partners {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0;
+        height: 50%;
+    }
+
+    #Partners h1 {
+        font-size: 24px;
+    }
+
+    #Partners img {
+        width: 60%;
+        height: 70%;
+        margin-left: 18%;
+    }
+
+    #PastorsDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;    
+    }
+
+    #Pastors h2 {
+        font-size: 24px;
+    }
+
+    #Pastors p {
+        font-size: 16px;
+    }
+
+    #Pastors img {
+        width: 40%;
+    }
+
+    #MapHeader h2 {
+        font-size: 16px;
+    }
+
+    iframe {
+        height: 300px;
+    }
+
+    #Textbox h3 {
+        font-size: 16px;
+    }
+
+    form button {
+        margin-right: 0;
+    }
+}
+
+/* Mobile phones */
+@media (min-width: 481px) and (max-width: 575px) {
+    header {
+        padding: 20px 0;
+    }
+
+    #titleh1 {
+        font-size: 16px;
+    }
+
+    #titleh2 {
+        font-size: 12px;
+    }
+
+    header img {
+        width: 50px;
+    }
+
+    #Programs h2 {
+        font-size: 24px;
+    }
+
+    #ProgramsDiv .Progtab h3 {
+        font-size: 20px;
+    }
+
+    #Partners h1 {
+        font-size: 24px;
+    }
+
+    #Partners img {
+        height: 70%;
+    }
+
+    #Pastors h2 {
+        font-size: 24px;
+    }
+
+    #Pastors p {
+        font-size: 16px;
+    }
+
+    #Pastors img {
+        width: 40%;
+    }
+
+    #MapHeader h2 {
+        font-size: 16px;
+    }
+
+    iframe {
+        height: 300px;
+    }
+
+    #Textbox h3 {
+        font-size: 16px;
+    }
+
+    form button {
+        margin-right: 0;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    header {
+        padding: 30px 0;
+    }
+
+    #titleh1 {
+        font-size: 20px;
+    }
+
+    #titleh2 {
+        font-size: 14px;
+    }
+
+    header img {
+        width: 60px;
+    }
+
+    #Programs h2 {
+        font-size: 28px;
+    }
+
+    #ProgramsDiv .Progtab h3 {
+        font-size: 24px;
+    }
+
+    #Partners h1 {
+        font-size: 28px;
+    }
+
+    #Partners img {
+        height: 70%;
+    }
+
+    #Pastors h2 {
+        font-size: 28px;
+    }
+
+    #Pastors p {
+        font-size: 18px;
+    }
+
+    #Pastors img {
+        width: 40%;
+    }
+
+    #MapHeader h2 {
+        font-size: 16px;
+    }
+
+    iframe {
+        height: 300px;
+    }
+
+    #Textbox h3 {
+        font-size: 16px;
+    }
+
+    form button {
+        margin-right: 0;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px){
+    #headerh1h2 {
+        flex-direction: row;
+    }
+
+    #titleh1 {
+        font-size: 24px;
+    }
+
+    #titleh2 {
+        font-size: 18px;
+    }
+
+    header img {
+        width: 70px;
+    }
+
+    #Programs h2 {
+        font-size: 36px;
+    }
+
+    #ProgramsDiv .Progtab h3 {
+        font-size: 30px;
+    }
+
+    #VideoSection {
+        height: 600px;
+    }
+
+    #Partners h1 {
+        font-size: 36px;
+    }
+
+    #Partners img {
+        height: 80%;
+    }
+
+    #Pastors h2 {
+        font-size: 36px;
+    }
+
+    #Pastors p {
+        font-size: 24px;
+    }
+
+    #Pastors img {
+        width: 40%;
+    }
+
+    #MapHeader h2 {
+        font-size: 24px;
+    }
+
+    iframe {
+        height: 500px;
+    }
+
+    #Textbox h3 {
+        font-size: 20px;
+    }
+
+    form button {
+        margin-right: 0;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    #titleh1 {
+        font-size: 28px;
+    }
+
+    #titleh2 {
+        font-size: 20px;
+    }
+
+    header img {
+        width: 90px;
+    }
+
+    #Programs h2 {
+        font-size: 40px;
+    }
+
+    #ProgramsDiv .Progtab h3 {
+        font-size: 36px;
+    }
+
+    #VideoSection {
+        height: 800px;
+    }
+
+    #Partners h1 {
+        font-size: 40px;
+    }
+
+    #Partners img {
+        height: 70%;
+    }
+
+    #Pastors h2 {
+        font-size: 40px;
+    }
+
+    #Pastors p {
+        font-size: 28px;
+    }
+
+    #Pastors img {
+        width: 50%;
+    }
+
+    #MapHeader h2 {
+        font-size: 28px;
+    }
+
+    iframe {
+        height: 700px;
+    }
+
+    #Textbox h3 {
+        font-size: 24px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+    header {
+        padding: 40px 0;
+    }
+
+    #titleh1 {
+        font-size: 32px;
+    }
+
+    #titleh2 {
+        font-size: 24px;
+    }
+
+    header img {
+        width: 100px;
+    }
+
+    #Programs h2 {
+        font-size: 48px;
+    }
+
+    #ProgramsDiv .Progtab h3 {
+        font-size: 42px;
+    }
+
+    #VideoSection {
+        height: 1000px;
+    }
+
+    #Partners h1 {
+        font-size: 48px;
+    }
+
+    #Partners img {
+        height: 60%;
+    }
+
+    #Pastors h2 {
+        font-size: 48px;
+    }
+
+    #Pastors p {
+        font-size: 32px;
+    }
+
+    #Pastors img {
+        width: 60%;
+    }
+
+    #MapHeader h2 {
+        font-size: 32px;
+    }
+
+    iframe {
+        height: 800px;
+    }
+
+    #Textbox h3 {
+        font-size: 28px;
+    }
+} */
