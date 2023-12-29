@@ -829,6 +829,11 @@ body {
     footer a {
         font-size: 10px;
     }
+
+    .socialsicon {
+        width: 8%;
+        margin-right: 5px;
+    }
 }
 
 /* Mobile phones */

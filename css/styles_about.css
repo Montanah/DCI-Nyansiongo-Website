@@ -296,6 +296,11 @@ footer p {
         /* margin: auto; */
     }
 
+    #footerDiv {
+        display: flex;
+        flex-direction: column;
+    }
+
     #footerDiv h3,
     #footerDiv2 h3,
     #footerDiv3 h3 {
@@ -310,83 +315,25 @@ footer p {
     footer a {
         font-size: 10px;
     }
-}
 
-/* Mobile phones */
-@media (min-width: 481px) and (max-width: 575px) {
-    header {
-        padding: 20px 0;
-    }
-
-    #titleh1 {
-        font-size: 16px;
-    }
-
-    #titleh2 {
-        font-size: 12px;
-    }
-
-    header img {
-        width: 50px;
-    }
-
-    #Programs h2 {
-        font-size: 24px;
-    }
-
-    #ProgramsDiv .Progtab h3 {
-        font-size: 20px;
-    }
-
-    #Partners h1 {
-        font-size: 24px;
-    }
-
-    #Partners img {
-        height: 70%;
-    }
-
-    #Pastors h2 {
-        font-size: 24px;
-    }
-
-    #Pastors p {
-        font-size: 16px;
-    }
-
-    #Pastors img {
-        width: 40%;
-    }
-
-    #MapHeader h2 {
-        font-size: 16px;
-    }
-
-    iframe {
-        height: 300px;
-    }
-
-    #Textbox h3 {
-        font-size: 16px;
-    }
-
-    form button {
-        margin-right: 0;
+    .socialsicon {
+        width: 8%;
+        margin-right: 5px;
     }
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 767px) {
     header {
         padding: 30px 0;
     }
 
     #titleh1 {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     #titleh2 {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     header img {
