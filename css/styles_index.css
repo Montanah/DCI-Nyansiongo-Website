@@ -649,14 +649,14 @@ body {
     }
 
     header nav {
-        margin-right: 40px;
+        margin-right: 10px;
     }
 
     header nav a {
         /* margin-left: 20px; */
         font-size: 9px;
         margin-left: auto; /* Aligns the nav to the right */
-        margin-right: 5px;
+        margin-right: 10px;
     }
 
     #VisMis h2 {
