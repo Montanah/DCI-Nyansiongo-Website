@@ -20,3 +20,26 @@ document.addEventListener('DOMContentLoaded', function() {
 const navigateToContact = () => {
     document.getElementById("footerDiv3").scrollIntoView({ behavior: 'smooth' });
 };
+
+document.addEventListener('DOMContentLoaded', function () {
+    const footer = document.getElementById('aboutusfooter');
+    let showFooter = false;
+
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
+        const pageHeight = document.body.scrollHeight - window.innerHeight;
+        const newShowFooter = scrollY >= pageHeight + 5;
+
+        if (newShowFooter !== showFooter) {
+            showFooter = newShowFooter;
+            footer.style.display = showFooter ? 'block' : 'none';
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // clean up event listener on page unload
+    window.addEventListener('unload', function () {
+        window.removeEventListener('scroll', handleScroll);
+    });
+});
