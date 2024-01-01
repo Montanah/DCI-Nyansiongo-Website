@@ -273,8 +273,13 @@ footer p {
         margin-right: 10px;
     }
 
+    #About p,
+    #About li {
+        font-size: 12px;
+    }
+
     #Pastors img {
-        width: 60%;
+        width: 80%;
         /* margin: auto; */
         margin-top: 20px;
         margin-bottom: 20px;
@@ -301,23 +306,39 @@ footer p {
         flex-direction: column;
     }
 
+    #footerDiv1,
+    #footerDiv2,
+    #footerDiv3 {
+        margin: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px;
+    }
+
     #footerDiv h3,
     #footerDiv2 h3,
     #footerDiv3 h3 {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     #footerDiv1 p {
-        font-size: 10px;
+        /* width: 80%; */
+        font-size: 14px;
+        padding-left: 20px;
+        padding-bottom: 20px;
     }
 
     footer p,
     footer a {
-        font-size: 10px;
+        font-size: 14px;
+    }
+
+    footer ul {
+        margin: auto;
     }
 
     .socialsicon {
-        width: 8%;
+        width: 5%;
         margin-right: 5px;
     }
 }
