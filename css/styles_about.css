@@ -302,7 +302,7 @@ footer p {
     }
 
     footer {
-        position: relative;
+        position: relative; /* Sticky footer position */
     }
 
     #footerDiv {
