@@ -301,6 +301,10 @@ footer p {
         /* margin: auto; */
     }
 
+    footer {
+        position: relative;
+    }
+
     #footerDiv {
         display: flex;
         flex-direction: column;
