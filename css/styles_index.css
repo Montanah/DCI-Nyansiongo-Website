@@ -653,7 +653,6 @@ body {
     }
 
     header nav a {
-        /* margin-left: 20px; */
         font-size: 10px;
         margin-left: auto; /* Aligns the nav to the right */
         margin-right: 7px;
