@@ -143,7 +143,7 @@ header nav a {
 }
  
 footer {
-    position: sticky;
+    /* position: sticky; */
     width: 100%;
     background-color: #000000;
     border-top: 1px solid #e5e5e5;
@@ -416,63 +416,33 @@ footer p {
     }
 
     #titleh1 {
-        font-size: 24px;
+        font-size: 15px;
     }
 
     #titleh2 {
-        font-size: 18px;
+        font-size: 13px;
     }
 
     header img {
         width: 70px;
     }
 
-    #Programs h2 {
-        font-size: 36px;
-    }
-
-    #ProgramsDiv .Progtab h3 {
-        font-size: 30px;
-    }
-
-    #VideoSection {
-        height: 600px;
-    }
-
-    #Partners h1 {
-        font-size: 36px;
-    }
-
-    #Partners img {
-        height: 80%;
-    }
-
-    #Pastors h2 {
-        font-size: 36px;
+    #Pastors img {
+        width: 80%;
     }
 
     #Pastors p {
-        font-size: 24px;
+        font-size: 18px;
     }
 
-    #Pastors img {
-        width: 40%;
+    footer h3 {
+        font-size: 16px;
     }
 
-    #MapHeader h2 {
-        font-size: 24px;
-    }
-
-    iframe {
-        height: 500px;
-    }
-
-    #Textbox h3 {
-        font-size: 20px;
-    }
-
-    form button {
-        margin-right: 0;
+    footer p,
+    footer a,
+    #footerDiv1 p {
+        font-size: 14px;
     }
 }
 

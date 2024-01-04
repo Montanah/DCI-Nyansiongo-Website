@@ -989,15 +989,27 @@ body {
     }
 
     #titleh1 {
-        font-size: 24px;
+        font-size: 15px;
     }
 
     #titleh2 {
-        font-size: 18px;
+        font-size: 13px;
     }
 
     header img {
         width: 70px;
+    }
+
+    #VisMis h2 {
+        font-size: 30px;
+    }
+
+    #VisMis p {
+        font-size: 16px;
+    }
+
+    .CTA-button {
+        margin-top: 20px;
     }
 
     #Programs h2 {
@@ -1005,11 +1017,16 @@ body {
     }
 
     #ProgramsDiv .Progtab h3 {
-        font-size: 30px;
+        font-size: 20px;
+    }
+
+    .Progtab p {
+        font-size: 16px;
     }
 
     #VideoSection {
-        height: 600px;
+        /* height: 600px; */
+        width: 100%;
     }
 
     #Partners h1 {
@@ -1017,7 +1034,8 @@ body {
     }
 
     #Partners img {
-        height: 80%;
+        /* height: 80%; */
+        margin-left: 10px;
     }
 
     #Pastors h2 {
@@ -1026,14 +1044,29 @@ body {
 
     #Pastors p {
         font-size: 24px;
+        margin-left: 10px;
+        width: auto;
+    }
+
+    #PstNames {
+        width: auto;
+        font-size: 20px;
+        margin-left: 10px;
+        /* margin-right: 10px; */
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 0;
+        /* text-align: left; */
     }
 
     #Pastors img {
         width: 40%;
+        margin-right: 10px;
+        margin-left: 5px;
     }
 
     #MapHeader h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     iframe {
@@ -1046,6 +1079,16 @@ body {
 
     form button {
         margin-right: 0;
+    }
+
+    footer h3 {
+        font-size: 16px;
+    }
+
+    footer p,
+    footer a,
+    #footerDiv1 p {
+        font-size: 14px;
     }
 }
 
