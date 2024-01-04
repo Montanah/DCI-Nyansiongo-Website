@@ -43,3 +43,17 @@ document.addEventListener('DOMContentLoaded', function () {
         window.removeEventListener('scroll', handleScroll);
     });
 });
+
+ // JavaScript for swipe functionality using TouchSwipe
+ $(document).ready(function () {
+    $("#audioContainer").swipe({
+        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+            if (direction === 'left') {
+                $(this).find('.audio-item').animate({ scrollLeft: '+=' + $(window).width() });
+            } else if (direction === 'right') {
+                $(this).find('.audio-item').animate({ scrollLeft: '-=' + $(window).width() });
+            }
+        }
+    });
+});
+

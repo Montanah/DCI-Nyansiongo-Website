@@ -280,6 +280,59 @@ header nav a {
     font-family: Roboto;
 }
 
+#Audiosection {
+    justify-content: space-evenly;
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* background-color: #ffffff; */
+    background: linear-gradient(to left, #c77dff, #98a9f3, #d6d0f5, #3d5a80);
+}
+
+#Audiosection h2 {
+    display: block;
+    /* margin-top: auto; */
+    /* margin-bottom: 10px; */
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: #000000 2px 2px 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    line-height: 1;
+    color: #00a9ff;
+    text-align: center;
+    /* padding-top: 40px; */
+}
+
+#Audiocontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+#audio {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5%;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 0px 30px 0px #000000;
+}
+
+#Audiosection p {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Roboto;
+    font-style: italic;
+    line-height: 1;
+    color: #000000;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* padding-top: 20px; */
+}
+
 #VideoSection {
     /* padding-top: 10px; */
     padding-left: 20px;
