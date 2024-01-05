@@ -863,10 +863,14 @@ body {
 
     #eventP h3 {
         font-size: 20px;
+        text-align: center;
     }
 
     #eventP {
-        width: 50%;
+        width: 80%;
+    }
+
+    #eventP p {
         font-size: 16px;
     }
 
