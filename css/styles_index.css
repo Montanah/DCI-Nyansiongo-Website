@@ -280,6 +280,84 @@ header nav a {
     font-family: Roboto;
 }
 
+#upcomingEvents {
+    width: 100%;
+    /* background-color: #ffffff; */
+    background: linear-gradient(to left, #05acfa, #98a9f3, #602d5f);
+}
+
+#upcomingEvents h2 {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: #000000 2px 2px 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    line-height: 1;
+    color: #00a9ff;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#shilohEvent {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#eventP h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff;
+    text-align: left;
+    font-family: Roboto;
+    /* font-style: italic; */
+    text-shadow: #000000 2px 2px 2px;
+}
+
+.event img {
+    width: 50%;
+    object-fit: cover;
+    /* border-radius: 5%; */
+    /* border: 1px solid #ffffff; */
+    box-shadow: 0px 0px 30px 0px #000000;
+    margin-bottom: 10px;
+    /* margin-left: 50px; */
+}
+
+#eventP {
+    width: 35%;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: Roboto;
+    font-style: italic;
+    line-height: 1;
+    color: #000000;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    margin-left: 0px;
+    /* margin-right: 50px; */
+}
+
 #Audiosection {
     justify-content: space-evenly;
     width: 100%;
@@ -306,22 +384,22 @@ header nav a {
     /* padding-top: 40px; */
 }
 
-#Audiocontainer {
+#audioContainer {
     display: flex;
     flex-direction: row;
 }
 
-#audio {
+.audio-item {
     width: 100%;
     padding: 5px;
     border-radius: 5%;
-    border: 1px solid #ffffff;
-    box-shadow: 0px 0px 30px 0px #000000;
+    /* border: 1px solid #ffffff;
+    box-shadow: 0px 0px 30px 0px #000000; */
 }
 
 #Audiosection p {
-    margin-bottom: 0;
-    font-size: 20px;
+    /* margin-bottom: 0; */
+    font-size: 16px;
     font-weight: bold;
     font-family: Roboto;
     font-style: italic;
@@ -768,6 +846,30 @@ body {
         font-size: 14px;
     }
 
+    #upcomingEvents h2 {
+        font-size: 24px;
+    }
+
+    #shilohEvent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .event img {
+        width: 100%;
+    }
+
+    #eventP h3 {
+        font-size: 20px;
+    }
+
+    #eventP {
+        width: 50%;
+        font-size: 16px;
+    }
+
     #Audiosection {
         display: none;
     }
@@ -1083,6 +1185,19 @@ body {
 
     .Progtab p {
         font-size: 16px;
+    }
+
+    .event img {
+        width: 80%;
+    }
+
+    #eventP h3 {
+        font-size: 30px;
+    }
+
+    #eventP {
+        width: 50%;
+        font-size: 20px;
     }
 
     #Audiosection {
