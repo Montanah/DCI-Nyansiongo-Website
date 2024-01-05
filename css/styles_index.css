@@ -870,6 +870,10 @@ body {
 
     #eventP {
         width: 80%;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        align-self: center;
     }
 
     #eventP p {
