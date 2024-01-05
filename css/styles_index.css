@@ -768,6 +768,10 @@ body {
         font-size: 14px;
     }
 
+    #Audiosection {
+        display: none;
+    }
+
     #VideoSection {
         height: 600px;
         flex-direction: column;
@@ -935,6 +939,10 @@ body {
         font-size: 20px;
     }
 
+    #Audiosection {
+        display: none;
+    }
+
     #Partners h1 {
         font-size: 24px;
     }
@@ -1076,6 +1084,11 @@ body {
     .Progtab p {
         font-size: 16px;
     }
+
+    #Audiosection {
+        display: none;
+    }
+
 
     #VideoSection {
         /* height: 600px; */
