@@ -358,6 +358,23 @@ header nav a {
     /* margin-right: 50px; */
 }
 
+#sermonsh2 h2 {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: #000000 2px 2px 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    line-height: 1;
+    color: #00a9ff;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient(to left, #c77dff, #98a9f3, #d6d0f5, #3d5a80);
+}
+
 #Audiosection {
     justify-content: space-evenly;
     width: 100%;
@@ -367,21 +384,6 @@ header nav a {
     margin-bottom: 0;
     /* background-color: #ffffff; */
     background: linear-gradient(to left, #c77dff, #98a9f3, #d6d0f5, #3d5a80);
-}
-
-#Audiosection h2 {
-    display: block;
-    /* margin-top: auto; */
-    /* margin-bottom: 10px; */
-    font-size: 40px;
-    font-weight: 700;
-    text-shadow: #000000 2px 2px 2px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: italic;
-    line-height: 1;
-    color: #00a9ff;
-    text-align: center;
-    /* padding-top: 40px; */
 }
 
 #audioContainer {
@@ -874,8 +876,16 @@ body {
         font-size: 16px;
     }
 
+    #sermonsh2 h2 {
+        font-size: 24px;
+    }
+
     #Audiosection {
-        display: none;
+        width: 100%;
+        overflow-x: scroll;
+        white-space: nowrap;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     #VideoSection {
@@ -1205,7 +1215,7 @@ body {
     }
 
     #Audiosection {
-        display: none;
+        width: 50%;
     }
 
 

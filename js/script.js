@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
- // JavaScript for swipe functionality using TouchSwipe
+ // jQuery for swipe functionality using TouchSwipe
  $(document).ready(function () {
     $("#audioContainer").swipe({
         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
