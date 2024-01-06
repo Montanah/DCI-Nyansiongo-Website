@@ -1371,6 +1371,14 @@ body {
         font-size: 36px;
     }
 
+    #Theme img {
+        width: 100%;
+    }
+
+    #ThemeDiv {
+        display: none;
+    }
+
     #VideoSection {
         height: 800px;
     }
