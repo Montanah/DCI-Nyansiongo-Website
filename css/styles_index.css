@@ -213,7 +213,37 @@ header nav a {
 
 .CTA-button:hover {
     background: #0342fe;
-}   
+}
+
+#Theme {
+    display: flex;
+    flex-direction: row;
+    background-color: #000000;
+}
+
+#Theme img {
+    /* width: 100%; */
+    /* height: 100%; */
+    object-fit: cover;
+    /* border-radius: 5%; */
+    /* border: 1px solid #ffffff; */
+    box-shadow: 0px 0px 30px 0px #000000;
+}
+
+#Theme p {
+    margin-bottom: 0;
+    font-size: 72px;
+    font-weight: bold;
+    font-family: Roboto;
+    font-style: italic;
+    line-height: 1;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0;
+    /* margin-bottom: 0; */
+    /* padding-top: 10px; */
+    padding-bottom: 10px;
+}
 
 #Programs {
     background: linear-gradient(to top, #1c56a297 20%, rgba(3, 255, 255, 0.267));
@@ -848,6 +878,14 @@ body {
         font-size: 14px;
     }
 
+    #Theme img {
+        width: 100%;
+    }
+
+    #ThemeDiv {
+        display: none;
+    }
+
     #upcomingEvents h2 {
         font-size: 24px;
     }
@@ -1059,7 +1097,11 @@ body {
         font-size: 20px;
     }
 
-    #Audiosection {
+    #Theme img {
+        width: 100%;
+    }
+
+    #ThemeDiv {
         display: none;
     }
 
@@ -1124,6 +1166,14 @@ body {
 
     #ProgramsDiv .Progtab h3 {
         font-size: 24px;
+    }
+
+    #Theme img {
+        width: 100%;
+    }
+
+    #ThemeDiv {
+        display: none;
     }
 
     #Partners h1 {
@@ -1203,6 +1253,14 @@ body {
 
     .Progtab p {
         font-size: 16px;
+    }
+
+    #Theme img {
+        width: 100%;
+    }
+
+    #ThemeDiv {
+        display: none;
     }
 
     .event img {
