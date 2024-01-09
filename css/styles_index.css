@@ -1143,7 +1143,7 @@ body {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 766px) {
     header {
         padding: 30px 0;
     }
@@ -1214,7 +1214,7 @@ body {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991px){
+@media (min-width: 767px) and (max-width: 991px){
     #headerh1h2 {
         flex-direction: row;
     }
