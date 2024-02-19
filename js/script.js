@@ -17,9 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 5000);
 });
 
-const navigateToContact = () => {
-    document.getElementById("footerDiv3").scrollIntoView({ behavior: 'smooth' });
-};
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("Document loaded");
+    
+    const navigateToContact = () => {
+        console.log("Navigating to contact");
+        document.getElementById("footerDiv3").scrollIntoView({ behavior: 'smooth' });
+    };
+});
 
 document.addEventListener('DOMContentLoaded', function () {
     const footer = document.getElementById('aboutusfooter');
