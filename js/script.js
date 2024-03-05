@@ -16,15 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
         currentIndex = (currentIndex + 1) % images.length;
     }, 5000);
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("Document loaded");
     
-    const navigateToContact = () => {
-        console.log("Navigating to contact");
-        document.getElementById("footerDiv3").scrollIntoView({ behavior: 'smooth' });
-    };
-});
+const navigateToContact = () => {
+    console.log("Navigating to contact");
+    document.getElementById("footerDiv3").scrollIntoView({ behavior: 'smooth' });
+};
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const footer = document.getElementById('aboutusfooter');

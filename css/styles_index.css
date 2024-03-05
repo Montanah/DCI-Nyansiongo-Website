@@ -13,6 +13,17 @@ body {
     background-color: transparent;
 }
 
+#top {
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+
+#bottom {
+    padding-top: 590px;
+    z-index: 1;
+}
+
 header {
     height: 50px;
     background: linear-gradient(to right, #230c4c, #000000);
