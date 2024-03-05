@@ -16,11 +16,12 @@ body {
 #top {
     position: fixed;
     width: 100%;
-    z-index: -1;
+    z-index: 1;
 }
 
 #bottom {
-    padding-top: 590px;
+    top: 590px;
+    position: relative;
     z-index: 1;
 }
 
