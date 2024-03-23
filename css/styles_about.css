@@ -80,6 +80,14 @@ header nav a {
     text-decoration: none;
 }
 
+header nav a:hover {
+    color: #0059ff;
+}
+
+header nav a:active {
+    color: #0059ff !important;
+}
+
 #About {
     width: 90%;
     margin: auto;

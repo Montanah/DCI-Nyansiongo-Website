@@ -11,6 +11,8 @@
     <!-- Include TouchSwipe library -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Include your script.js file -->
     <script defer src="js/script.js"></script>
 </head>
@@ -81,14 +83,52 @@
     </section>
     <section id="upcomingEvents">
         <h2>Past/Upcoming Events</h2>
-        <div id="shilohEvent">
-            <aside class="event">
-                <img src="images/Shilohfestival.jpeg" alt="Event1">
-            </aside>
-            <aside id="eventP">
-                <h3>Shiloh Prayer Festival</h3>
-                <p>Shiloh Prayer Festival is our annual first prayer and fasting week at the beginning of each year; to seek God's guidance and direction throughout the year. This year's festival takes place from 8th - 14th January 2024, 6am - 6pm. All are welcome to join us!</p>
-            </aside>
+        <div id="events">
+            <div class="eventSec" id="event1">
+                <aside class="event">
+                    <img src="images/Shilohfestival.jpeg" alt="Event1">
+                </aside>
+                <aside class="eventP">
+                    <h3>Shiloh Prayer Festival</h3>
+                    <p class="eventPara">Shiloh Prayer Festival is our annual first prayer and fasting week at the beginning of each year; to seek God's guidance and direction throughout the year. This year's festival takes place from 8th - 14th January 2024, 6am - 6pm. All are welcome to join us!</p>
+                </aside>
+            </div>
+            <div class="eventSec" id="event2">
+                <div class="doubleImages">
+                    <aside class="event">
+                        <img class="easterConvImgs" src="images/Easter Convention.jpg" alt="Easter Convention">
+                    </aside>
+                    <aside class="event">
+                        <img class="easterConvImgs" src="images/Women Conference Flyer Template - Made with PosterMyWall.jpg" alt="Women Conference">
+                    </aside>
+                </div>
+                <aside class="eventP" id="easterConvP">
+                    <h3>Easter Convention</h3>
+                    <p class="eventPara">
+                        This year our annual Easter Convention will be taking place from the 28th to the 31st of March 2024.
+                        We will be having indoor sessions from 9:00am to 1:00pm in the church hall and outdoor sessions from 2:00pm to 7:00pm at the Nyansiongo Town Council gardens.
+                        The ministers for the event will be;
+                    </p>
+                        <ul class="eventPara">
+                            <li>Pst. Innocent Omoke from Kisii</li>
+                            <li>Pst. Richard Birir from Kericho</li>
+                            <li>Evangelist Nina Waryaro from Uganda</li>
+                        </ul>
+                    <p id="eventParaTag">
+                        All are welcome to join us!
+                    </p>
+                </aside>
+            </div>
+            <!-- <div id="leftArrowDiv">
+                <button class="navArrow" type="button" onclick="handlePreviousEvent()" title="Left Arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </div>
+            <div id="rightArrowDiv">
+                <button class="navArrow" type="button" onclick="handleNextEvent()" title="Right Arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div> -->
         </div>
     </section>
     <div id="sermonsh2">

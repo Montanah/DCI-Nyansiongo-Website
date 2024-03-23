@@ -92,6 +92,14 @@ header nav a {
     text-decoration: none;
 }
 
+header nav a:hover {
+    color: #0059ff;
+}
+
+header nav a:active {
+    color: #0059ff !important;
+}
+
 #ValProp {
     height: 500px;
     width: 100%;
@@ -343,12 +351,39 @@ header nav a {
     padding-top: 40px;
 }
 
-#shilohEvent {
+#events {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
     align-items: center;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.eventSec {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: scroll;
+    /* justify-content: space-evenly; */
     /* justify-content: center; */
+}
+
+#event1 {
+    display: none;
+}
+
+.doubleImages {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 10px;
+    text-align: center; */
+
 }
 
 .event {
@@ -361,7 +396,7 @@ header nav a {
     text-align: center;
 }
 
-#eventP h3 {
+.eventP h3 {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 40px;
@@ -384,7 +419,16 @@ header nav a {
     /* margin-left: 50px; */
 }
 
-#eventP {
+.easterConvImgs {
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.eventP {
     width: 35%;
     font-size: 26px;
     font-weight: bold;
@@ -398,6 +442,72 @@ header nav a {
     padding-top: 0;
     margin-left: 0px;
     /* margin-right: 50px; */
+}
+
+.eventPara,
+.eventPara li,
+.eventPara {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Roboto;
+    font-style: italic;
+    line-height: 1.2;
+    color: #000000;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    margin-left: 0px;
+    /* margin-right: 50px; */
+}
+
+.eventParaTag {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Roboto;
+    font-style: italic;
+    line-height: 1.2;
+    color: #000000;
+    text-align: center;
+}
+
+#easterConvP {
+    width: 100%;
+    margin-right: 20px;
+}
+
+#leftArrowDiv,
+#rightArrowDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#leftArrowDiv {
+    left: 0;
+}
+
+#rightArrowDiv {
+    right: 0;
+}
+
+.navArrow {
+    background-color: #ffffff; /* Background color */
+    border: 2px solid #333333; /* Border color */
+    border-radius: 50%; /* Round the corners to make them circular */
+    padding: 10px; /* Adjust padding as needed */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition on hover */
+}
+
+.navArrow:hover {
+    background-color: #333333; /* Darker background color on hover */
+    border-color: #ffffff; /* Lighter border color on hover */
+}
+
+.navArrow i {
+    font-size: 16px; /* Adjust icon size as needed */
+    color: #333333; /* Icon color */
 }
 
 #sermonsh2 h2 {
@@ -902,7 +1012,7 @@ body {
         font-size: 24px;
     }
 
-    #shilohEvent {
+    .eventSec{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -913,12 +1023,12 @@ body {
         width: 100%;
     }
 
-    #eventP h3 {
+    .eventP h3 {
         font-size: 20px;
         text-align: center;
     }
 
-    #eventP {
+    .event {
         width: 80%;
         align-items: center;
         justify-content: center;
@@ -926,7 +1036,16 @@ body {
         align-self: center;
     }
 
-    #eventP p {
+    .eventPara {
+        margin-left: 40px;
+    }
+
+    #eventParaTag {
+        text-align: center;
+    }
+
+    .eventPara,
+    .eventPara li {
         font-size: 16px;
     }
 
@@ -1279,13 +1398,37 @@ body {
         width: 80%;
     }
 
-    #eventP h3 {
-        font-size: 30px;
+    /* .eventSec{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    #eventP {
-        width: 50%;
+    .event img {
+        width: 100%;
+    }
+
+    .eventP h3 {
         font-size: 20px;
+        text-align: center;
+    }
+
+    .event {
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        align-self: center;
+    }
+
+    .eventPara,
+    .eventPara li {
+        font-size: 16px;
+    } */
+
+    .eventParaTag {
+        text-align: center;
     }
 
     #Audiosection {

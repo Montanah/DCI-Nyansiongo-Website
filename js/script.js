@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
     
 const navigateToContact = () => {
-    console.log("Navigating to contact");
     document.getElementById("footerDiv3").scrollIntoView({ behavior: 'smooth' });
 };
 
@@ -46,7 +45,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
- // jQuery for swipe functionality using TouchSwipe
+// jQuery for swipe functionality using TouchSwipe for the events
+$(document).ready(function () {
+    $("#events").swipe({
+        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+            var scrollAmount = $('.eventSec').outerWidth(); // Adjust to the width of .eventSec
+            if (direction === 'left') {
+                $("#events").animate({ scrollLeft: '+=' + scrollAmount });
+            } else if (direction === 'right') {
+                $("#events").animate({ scrollLeft: '-=' + scrollAmount });
+            }
+        }
+    });
+});
+
+const handlePreviousEvent = () => {
+    const scrollAmount = $('.eventSec').outerWidth();
+    $("#events").animate({ scrollLeft: '-=' + scrollAmount });
+}
+
+const handleNextEvent = () => {
+    const scrollAmount = $('.eventSec').outerWidth();
+    $("#events").animate({ scrollLeft: '+=' + scrollAmount });
+}
+
+ // jQuery for swipe functionality using TouchSwipe for the audio items
  $(document).ready(function () {
     $("#audioContainer").swipe({
         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
