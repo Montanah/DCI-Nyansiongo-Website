@@ -372,7 +372,7 @@ header nav a:active {
 }
 
 #event1 {
-    display: none;
+    /* display: none; */
 }
 
 .doubleImages {
@@ -481,14 +481,15 @@ header nav a:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: ponter;
 }
 
 #leftArrowDiv {
-    left: 0;
+    margin-left: 10px;
 }
 
 #rightArrowDiv {
-    right: 0;
+    margin-right: 10px;
 }
 
 .navArrow {

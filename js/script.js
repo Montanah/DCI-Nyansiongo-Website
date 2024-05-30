@@ -45,29 +45,47 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// jQuery for swipe functionality using TouchSwipe for the events
-$(document).ready(function () {
-    $("#events").swipe({
-        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-            var scrollAmount = $('.eventSec').outerWidth(); // Adjust to the width of .eventSec
-            if (direction === 'left') {
-                $("#events").animate({ scrollLeft: '+=' + scrollAmount });
-            } else if (direction === 'right') {
-                $("#events").animate({ scrollLeft: '-=' + scrollAmount });
-            }
-        }
-    });
+// Swipe functionality for events
+document.addEventListener("DOMContentLoaded", function () {
+    const swipeList = document.getElementById("events");
+    const totalEvents = swipeList.children.length;
+    let currentEvent = 0;
+
+    const handlePrevEvent = () => {
+        currentEvent = Math.max(currentEvent - 1, 0);
+        updateSwipeList();
+    }
+
+    const handleNextEvent = () => {
+        currentEvent = Math.min(currentEvent + 1, totalEvents - 1);
+        updateSwipeList();
+    }
+
+    const updateSwipeList = () => {
+        // Hide all events
+        Array.from(swipeList.children).forEach(event => {
+            event.style.display = 'hidden';
+        });
+
+        // Show current event
+        swipeList.children[currentEvent].style.display = 'hidden';
+
+        // Toggle visibility of arrows based on current event
+        const leftArrow = document.getElementById("leftArrow");
+        const rightArrow = document.getElementById("rightArrow");
+
+        leftArrow.style.visibility = currentEvent === 0 ? 'hidden' : 'visible';
+        rightArrow.style.visibility = currentEvent === totalEvents - 1 ? 'hidden' : 'visible';
+    }
+
+    // Initialize swipe list
+    updateSwipeList();
+
+    // Expose functions to global scope
+    window.handlePrevEvent = handlePrevEvent;
+    window.handleNextEvent = handleNextEvent;
 });
 
-const handlePreviousEvent = () => {
-    const scrollAmount = $('.eventSec').outerWidth();
-    $("#events").animate({ scrollLeft: '-=' + scrollAmount });
-}
-
-const handleNextEvent = () => {
-    const scrollAmount = $('.eventSec').outerWidth();
-    $("#events").animate({ scrollLeft: '+=' + scrollAmount });
-}
 
  // jQuery for swipe functionality using TouchSwipe for the audio items
  $(document).ready(function () {
