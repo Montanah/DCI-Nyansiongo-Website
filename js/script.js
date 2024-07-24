@@ -21,7 +21,7 @@ const navigateToContact = () => {
     document.getElementById("footerDiv3").scrollIntoView({ behavior: 'smooth' });
 };
 
-
+// Swipe functionality for footer
 document.addEventListener('DOMContentLoaded', function () {
     const footer = document.getElementById('aboutusfooter');
     let showFooter = false;
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Swipe functionality for events
 document.addEventListener("DOMContentLoaded", function () {
-    const swipeList = document.getElementById("events");
+    const swipeList = document.getElementByClassName("eventSec");
     const totalEvents = swipeList.children.length;
     let currentEvent = 0;
 
@@ -85,7 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.handlePrevEvent = handlePrevEvent;
     window.handleNextEvent = handleNextEvent;
 });
-
 
  // jQuery for swipe functionality using TouchSwipe for the audio items
  $(document).ready(function () {
