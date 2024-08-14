@@ -699,16 +699,59 @@ header nav a:active {
 }
 
 #Pastors img {
-    width: 30%;
-    height: 100%;
+    width: 35%;
+    /* height: 100%; */
     margin-right: 100px;
     object-fit: cover;
-    border-radius: 5%;
-    border: 1px solid #ffffff;
-    box-shadow: 0px 0px 30px 0px #000000;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    /* border-radius: 5%; */
+    /* border: 1px solid #ffffff; */
+    /* box-shadow: 0px 0px 30px 0px #000000; */
+    margin-bottom: 100px;
+    /* margin-top: 20px; */
     /* image-rendering: crisp-edges; */
+}
+
+#articles {
+    background: linear-gradient(to right, #c77dff, #bdc1dd, #98a9f3, #d6d0f5);
+    margin: 50px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    align-items: start;
+}
+
+.photo img {
+    width: 100%; /* Ensure the photo takes up the full width of the grid cell */
+    height: auto; /* Maintain the aspect ratio of the photo */
+    justify-content: center; /* Center the photo horizontally */
+    align-items: center; /* Center the photo vertically */
+    margin-top: 200px;
+}
+
+.text {
+    grid-column: 2; /* Place the paragraph and titles in the right column */
+}
+
+#articles-h2 {
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: #000000 2px 2px 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: #00a9ff;
+    text-align: center;
+    grid-column: 1 / -1; /* Make the h2 span both columns */
+}
+
+#articles–h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#articles-h4 {
+    font-size: 20px;
+    font-weight: 700;
 }
 
 #MapTxt {
@@ -1140,6 +1183,41 @@ body {
         width: 40%;
         align-items: center;
         margin-right: 0;
+    }
+
+    #articles {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        padding: 20px;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        align-items: center;
+    }
+
+    .photo img {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .text {
+        grid-column: 1;
+        font-size: 12px;
+    }
+
+    #articles-h2 {
+        font-size: 24px;
+    }
+
+    #articles-h3 {
+        font-size: 20px;
+    }
+
+    #articles-h4 {
+        font-size: 16px;
     }
 
     #MapTxt {
