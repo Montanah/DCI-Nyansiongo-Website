@@ -362,14 +362,14 @@ header nav a:active {
 
 }
 
-.eventSec {
+/* .eventSec {
     display: flex;
     flex-direction: row;
     align-items: center;
     overflow-x: scroll;
     /* justify-content: space-evenly; */
-    /* justify-content: center; */
-}
+    /* justify-content: center; 
+} */
 
 #event1 {
     /* display: none; */
@@ -476,20 +476,36 @@ header nav a:active {
     margin-right: 20px;
 }
 
-#leftArrowDiv,
-#rightArrowDiv {
+#projectsSwipe {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.eventSec {
+    display: none; /* Hide by default */
+    flex-shrink: 0;
+    width: 100%;
+    flex-direction: row; /* Arrange child elements in a row */
+    align-items: center; /* Align items vertically center if needed */
+    justify-content: space-evenly; /* Distribute space between child elements */
+}
+
+.eventSec.active {
+    display: flex;
+}
+
+.navArrow {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: ponter;
-}
-
-#leftArrowDiv {
-    margin-left: 10px;
-}
-
-#rightArrowDiv {
-    margin-right: 10px;
+    background: none;
+    border: none;
+    margin: 0, 10px, 0, 10px;
 }
 
 .navArrow {

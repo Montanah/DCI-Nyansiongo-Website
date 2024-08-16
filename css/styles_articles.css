@@ -1,0 +1,512 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #00a9ff, #3d5a80, #00a9ff, #7b2cbf);
+}
+
+header {
+    height: 50px;
+    background: linear-gradient(to right, #230c4c, #000000);
+    border-bottom: 1px solid #e5e5e5;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    float: left;
+    margin-left: 20px;
+    width: 50px;
+}
+
+#headerh1h2 {
+    /* display: flex; */
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+}
+
+#titleh1 {
+    float: left;
+    /* width: auto; */
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #feffff;
+}
+
+
+#titleh2 {
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: #e8e7ed79;
+}
+
+header nav {
+    margin-top: 0;
+    margin-left: auto; /* Aligns the nav to the right */
+    margin-right: 20px;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav a {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: #feffff;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #0059ff;
+}
+
+header nav a:active {
+    color: #0059ff !important;
+}
+
+.articlesSection {
+    margin-top: 20px;
+}
+
+#articles {
+    /* background: linear-gradient(to right, #c77dff, #bdc1dd, #98a9f3, #d6d0f5); */
+    margin: 50px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    align-items: start;
+}
+
+.photo img {
+    width: 100%; /* Ensure the photo takes up the full width of the grid cell */
+    height: auto; /* Maintain the aspect ratio of the photo */
+    justify-content: center; /* Center the photo horizontally */
+    align-items: center; /* Center the photo vertically */
+    margin-top: 20px;
+}
+
+.text {
+    grid-column: 2; /* Place the paragraph and titles in the right column */
+}
+
+#articles-h2 {
+    margin-top: 0px;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: #000000 2px 2px 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: #00a9ff;
+    text-align: center;
+    grid-column: 1 / -1; /* Make the h2 span both columns */
+}
+
+#articles–h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#articles-h4 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+footer {
+    width: 100%;
+    background-color: #000000;
+    border-top: 1px solid #e5e5e5;
+    padding: 20px 0;
+}
+
+#footerDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#footerDiv1 {
+    padding: px 0;
+    align-items: left;
+    justify-content: left;
+    margin-left: 0px;
+}
+
+#footerDiv h3,
+#footerDiv2 h3,
+#footerDiv3 h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: #feffff;
+    text-align: center;
+    /* align-items: center;
+    justify-content: center; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    text-shadow: #7a0484 2px 2px 2px;
+}
+
+#footerDiv1 p {
+    width: 90%;
+    margin-bottom: 0;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Roboto;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#footerDiv2 {
+    text-align: center;
+    
+}
+
+footer a {
+    /* margin-left: 20px; */
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+    color: #feffff;
+    text-decoration: none;
+    font-style: italic;
+    font-family: Roboto;
+    text-align: center;
+}
+
+footer a:hover {
+    color: #0059ff;
+}
+
+.socialsicon {
+    width: 5%;
+    margin-right: 5px;
+}
+
+footer p {
+    margin-bottom: 0;
+    /* margin-right: 50px; */
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Roboto;
+    text-align: center;
+    line-height: 1;
+    color: #ffffff;
+    font-family: Roboto;
+    font-style: italic;
+}
+
+/* Mobile */
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+
+    #titleh1 {
+        font-size: 15px;
+    }
+
+    #titleh2 {
+        font-size: 12px;
+    }
+
+    header img {
+        width: 40px;
+    }
+
+    #articles-h2 {
+        font-size: 28px;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    #footerDiv h3,
+    #footerDiv2 h3,
+    #footerDiv3 h3 {
+        font-size: 14px;
+    }
+
+    #footerDiv1 p {
+        font-size: 14px;
+    }
+
+    footer a {
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .socialsicon {
+        width: 5%;
+    }
+    
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+
+    #titleh1 {
+        font-size: 15px;
+    }
+
+    #titleh2 {
+        font-size: 12px;
+    }
+
+    header img {
+        width: 40px;
+    }
+
+    #articles-h2 {
+        font-size: 28px;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    #footerDiv h3,
+    #footerDiv2 h3,
+    #footerDiv3 h3 {
+        font-size: 14px;
+    }
+
+    #footerDiv1 p {
+        font-size: 14px;
+    }
+
+    footer a {
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .socialsicon {
+        width: 5%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    #articles {
+        grid-template-columns: 1fr; /* Change the grid to a single column */
+    }
+
+    .photo img {
+        width: 100%;
+    }
+
+    .text {
+        grid-column: 1; /* Place the paragraph and titles in the left column */
+    }
+
+    #articles-h2 {
+        font-size: 30px;
+    }
+
+    #articles-h3 {
+        font-size: 20px;
+    }
+
+    #articles-h4 {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 10px 0;
+    }
+    
+    header img {
+        width: 40px;
+    }
+
+    #titleh1 {
+        font-size: 16px;
+    }
+
+    #titleh2 {
+        font-size: 12px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    #footerDiv h3,
+    #footerDiv2 h3,
+    #footerDiv3 h3 {
+        font-size: 14px;
+    }
+
+    #footerDiv1 p {
+        font-size: 14px;
+    }
+
+    footer a {
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .socialsicon {
+        width: 5%;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 481px) and (max-width: 767px) {
+    header {
+        padding: 30px 0;
+    }
+
+    #titleh1 {
+        font-size: 15px;
+    }
+
+    #titleh2 {
+        font-size: 12px;
+    }
+
+    header img {
+        width: 60px;
+    }
+
+    #articles-h2 {
+        font-size: 28px;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    #footerDiv h3,
+    #footerDiv2 h3,
+    #footerDiv3 h3 {
+        font-size: 14px;
+    }
+
+    #footerDiv1 p {
+        font-size: 14px;
+    }
+
+    footer a {
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .socialsicon {
+        width: 5%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        padding: 30px 0;
+    }
+
+    #titleh1 {
+        font-size: 20px;
+    }
+
+    #titleh2 {
+        font-size: 16px;
+    }
+
+    header img {
+        width: 70px;
+    }
+
+    #articles-h2 {
+        font-size: 32px;
+    }
+}
+
+/* Large devices (desktops, 1025px and up) */
+@media (min-width: 1025px) {
+    header {
+        padding: 30px 0;
+    }
+
+    #titleh1 {
+        font-size: 24px;
+    }
+
+    #titleh2 {
+        font-size: 18px;
+    }
+
+    header img {
+        width: 80px;
+    }
+
+    #articles-h2 {
+        font-size: 36px;
+    }
+}
+
+/* footer {
+    background: linear-gradient(to right, #230c4c, #000000);
+    color: #feffff;
+    padding: 20px 0;
+    text-align: center;
+} */

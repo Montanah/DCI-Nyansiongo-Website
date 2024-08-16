@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Swipe functionality for events
 document.addEventListener("DOMContentLoaded", function () {
-    const swipeList = document.getElementByClassName("eventSec");
+    const swipeList = document.getElementById("projectsSwipe");
     const totalEvents = swipeList.children.length;
     let currentEvent = 0;
 
@@ -64,19 +64,42 @@ document.addEventListener("DOMContentLoaded", function () {
     const updateSwipeList = () => {
         // Hide all events
         Array.from(swipeList.children).forEach(event => {
-            event.style.display = 'hidden';
+            event.classList.remove('active');
         });
 
         // Show current event
-        swipeList.children[currentEvent].style.display = 'hidden';
+        swipeList.children[currentEvent].classList.add('active');
 
         // Toggle visibility of arrows based on current event
-        const leftArrow = document.getElementById("leftArrow");
-        const rightArrow = document.getElementById("rightArrow");
-
-        leftArrow.style.visibility = currentEvent === 0 ? 'hidden' : 'visible';
-        rightArrow.style.visibility = currentEvent === totalEvents - 1 ? 'hidden' : 'visible';
+        document.getElementById("leftArrow").style.visibility = currentEvent === 0 ? 'hidden' : 'visible';
+        document.getElementById("rightArrow").style.visibility = currentEvent === totalEvents - 1 ? 'hidden' : 'visible';
     }
+
+    // Swipe events for desktop (using mouse)
+    let startX = null;
+
+    const handleTouchStart = (e) => {
+        startX = e.touches ? e.touches[0].clientX : e.clientX;
+    };
+
+    const handleTouchEnd = (e) => {
+        if (!startX) return;
+        const endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+        const diffX = startX - endX;
+
+        if (Math.abs(diffX) > 50) {  // 50px is a threshold for swipe
+            if (diffX > 0) {
+                handleNextEvent();
+            } else {
+                handlePrevEvent();
+            }
+        }
+
+        startX = null;
+    };
+
+    swipeList.addEventListener('mousedown', handleTouchStart);
+    swipeList.addEventListener('mouseup', handleTouchEnd);
 
     // Initialize swipe list
     updateSwipeList();

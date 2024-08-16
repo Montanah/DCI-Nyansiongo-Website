@@ -81,15 +81,16 @@
             <p>The Year of Threshing the Mountains ~ Isaiah 41:15-16</p>
         </div>
     </section>
-    <section id="upcomingEvents">
-        <h2>Past/Upcoming Events</h2> 
-        <div id="events">
-            <div id="leftArrowDiv">
-                <button class="navArrow" id="leftArrow" type="button" onclick="handlePreviousEvent()" title="Left Arrow">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
-            </div>
-            <div class="eventSec" id="event1">
+   <section id="upcomingEvents">
+    <h2>Past/Upcoming Events</h2> 
+    <div id="events">
+        <div id="leftArrowDiv">
+            <button class="navArrow" id="leftArrow" type="button" onclick="handlePrevEvent()" title="Left Arrow">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+        </div>
+        <ul id="projectsSwipe">
+            <li class="eventSec" id="event1">
                 <div class="doubleImages">
                     <aside class="event">
                         <img class="easterConvImgs" src="images/Easter Convention.jpg" alt="Easter Convention">
@@ -105,32 +106,31 @@
                         We will be having indoor sessions from 9:00am to 1:00pm in the church hall and outdoor sessions from 2:00pm to 7:00pm at the Nyansiongo Town Council gardens.
                         The ministers for the event will be;
                     </p>
-                        <ul class="eventPara">
-                            <li>Pst. Innocent Omoke from Kisii</li>
-                            <li>Pst. Richard Birir from Kericho</li>
-                            <li>Evangelist Nina Waryaro from Uganda</li>
-                        </ul>
-                    <p id="eventParaTag">
-                        All are welcome to join us!
-                    </p>
+                    <ul class="eventPara">
+                        <li>Pst. Innocent Omoke from Kisii</li>
+                        <li>Pst. Richard Birir from Kericho</li>
+                        <li>Evangelist Nina Waryaro from Uganda</li>
+                    </ul>
+                    <p id="eventParaTag">All are welcome to join us!</p>
                 </aside>
-            </div>
-            <!-- <div class="eventSec" id="event2">
+            </li>
+            <li class="eventSec" id="event2">
                 <aside class="event">
-                    <img src="images/Shilohfestival.jpeg" alt="Event1">
+                    <img src="images/Shilohfestival.jpeg" alt="Shiloh Prayer Festival">
                 </aside>
                 <aside class="eventP">
                     <h3>Shiloh Prayer Festival</h3>
                     <p class="eventPara">Shiloh Prayer Festival is our annual first prayer and fasting week at the beginning of each year; to seek God's guidance and direction throughout the year. This year's festival takes place from 8th - 14th January 2024, 6am - 6pm. All are welcome to join us!</p>
                 </aside>
-            </div>
-            <div id="rightArrowDiv">
-                <button class="navArrow" id="rightArrow" type="button" onclick="handleNextEvent()" title="Right Arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </button>
-            </div> -->
+            </li>
+        </ul>
+        <div id="rightArrowDiv">
+            <button class="navArrow" id="rightArrow" type="button" onclick="handleNextEvent()" title="Right Arrow">
+                <i class="fas fa-arrow-right"></i>
+            </button>
         </div>
-    </section>
+    </div>
+</section>
     <div id="sermonsh2">
         <h2>Radio Vuna Sermons</h2>
     </div>
@@ -371,6 +371,7 @@
                 Nyamira County
                 Kenya
             </p>
+            <a href="articles.html">Read More</a>
         </div>
     </section>
     <section id="MapTxt">
