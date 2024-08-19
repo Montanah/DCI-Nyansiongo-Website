@@ -239,6 +239,11 @@ html {
 }
 
 @media screen and (max-width: 480px) {
+
+    articles {
+        margin: 10px;
+    }
+
     header {
         padding: 10px 0;
     }
@@ -257,6 +262,10 @@ html {
 
     #articles-h2 {
         font-size: 28px;
+    }
+
+    .articlesSection p {
+        font-size: 12px;
     }
 
     footer {
@@ -339,6 +348,7 @@ html {
 
 @media screen and (max-width: 768px) {
     #articles {
+        margin: 0px;
         grid-template-columns: 1fr; /* Change the grid to a single column */
     }
 
@@ -362,6 +372,11 @@ html {
         font-size: 16px;
     }
 
+    #articles p,
+    .articlesSection p {
+        font-size: 12px;
+    }
+
     header {
         padding: 10px 0;
     }
@@ -382,25 +397,13 @@ html {
         font-size: 14px;
     }
 
-    footer {
-        padding: 10px 0;
+    footer h3 {
+        font-size: 16px;
     }
 
-    #footerDiv h3,
-    #footerDiv2 h3,
-    #footerDiv3 h3 {
-        font-size: 14px;
-    }
-
+    footer p,
+    footer a,
     #footerDiv1 p {
-        font-size: 14px;
-    }
-
-    footer a {
-        font-size: 14px;
-    }
-
-    footer p {
         font-size: 14px;
     }
 
