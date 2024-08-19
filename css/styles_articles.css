@@ -318,6 +318,15 @@ html {
         font-size: 28px;
     }
 
+    #footerDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
     footer {
         padding: 20px 0;
     }
@@ -395,6 +404,15 @@ html {
 
     header nav a {
         font-size: 14px;
+    }
+
+    #footerDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     footer h3 {
