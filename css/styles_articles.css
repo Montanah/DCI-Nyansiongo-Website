@@ -415,6 +415,7 @@ html {
     #articles {
         margin: 0px;
         grid-template-columns: 1fr; /* Change the grid to a single column */
+        padding: 10px;
     }
 
     .photo img {
