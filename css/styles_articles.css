@@ -446,8 +446,8 @@ html {
     #footerDiv {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        text-align: center;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         margin-top: 0;
         margin-bottom: 0;
