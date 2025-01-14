@@ -592,7 +592,7 @@ header nav a:active {
     /* width: 100%; */
     height: 400px;
     /* background-color: #ffffff; */
-    background: linear-gradient(to bottom, #000000, #1a5f81, #000000);
+    background: linear-gradient(to bottom,#000000, #007bff, #40baf2);
 
 }
 
@@ -600,7 +600,7 @@ header nav a:active {
     /* border-radius: 20px; */
     margin-left: 5%;
     width: 50%;
-    height: 99%;
+    height: 99.5%;
 }
 
 #Partners {
