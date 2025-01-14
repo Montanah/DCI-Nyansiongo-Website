@@ -429,7 +429,7 @@ header nav a:active {
 }
 
 .eventP {
-    width: 35%;
+    /* width: 35%; */
     font-size: 26px;
     font-weight: bold;
     font-family: Roboto;
@@ -1095,7 +1095,7 @@ body {
     }
 
     .event {
-        width: 80%;
+        /* width: 80%; */
         align-items: center;
         justify-content: center;
         align-content: center;
