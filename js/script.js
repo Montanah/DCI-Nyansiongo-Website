@@ -1,20 +1,44 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var images = ["images/BgImg1.jpeg", "images/BgImg2.jpeg", "images/BgImg3.jpeg", "images/BgImg4.jpeg", "images/BgImg5.jpeg", "images/BgImg6.JPG", "images/BgImg7.JPG", "images/BgImg8.JPG", "images/BgImg9.JPG", "images/BgImg10.JPG", "images/BgImg11.JPG", "images/BgImg12.JPG", "images/BgImg13.JPG", "images/BgImg14.JPG", "images/BgImg15.JPG", "images/BgImg16.JPG", "images/BgImg17.JPG", "images/BgImg18.JPG", "images/BgImg19.JPG", "images/BgImg20.JPG", "images/BgImg21.JPG", "images/BgImg22.JPG"];
+    // Preload all images for smoother transitions
+    const images = [
+        "images/BgImg1.jpeg", "images/BgImg2.jpeg", "images/BgImg3.jpeg", 
+        "images/BgImg4.jpeg", "images/BgImg5.jpeg", "images/BgImg6.JPG", 
+        "images/BgImg7.JPG", "images/BgImg8.JPG", "images/BgImg9.JPG", 
+        "images/BgImg10.JPG", "images/BgImg11.JPG", "images/BgImg12.JPG", 
+        "images/BgImg13.JPG", "images/BgImg14.JPG", "images/BgImg15.JPG", 
+        "images/BgImg16.JPG", "images/BgImg17.JPG", "images/BgImg18.JPG", 
+        "images/BgImg19.JPG", "images/BgImg20.JPG", "images/BgImg21.JPG", 
+        "images/BgImg22.JPG"
+    ];
+    
+    // Cache DOM element
+    const valPropElement = document.getElementById("ValProp");
+    
+    // Preload images
+    images.forEach(img => {
+        new Image().src = img;
+    });
 
-    var currentIndex = 0;
-    var startIndex = 3; // Change this to start from a different image index
-
+    let currentIndex = 3; // Start from index 3
+    
     // Set initial background
-    document.getElementById("ValProp").style.backgroundImage = "url(" + images[startIndex] + ")";
-    currentIndex = (startIndex + 1) % images.length;
-
-    // Apply smooth transition
-    document.getElementById("ValProp").style.transition = "background-image 1s ease-in-out";
-
-    setInterval(function() {
-        document.getElementById("ValProp").style.backgroundImage = "url(" + images[currentIndex] + ")";
-        currentIndex = (currentIndex + 1) % images.length;
-    }, 5000);
+    valPropElement.style.backgroundImage = `url(${images[currentIndex]})`;
+    valPropElement.style.transition = "background-image 1s ease-in-out";
+    
+    // Use requestAnimationFrame for smoother animations
+    let lastUpdate = 0;
+    const interval = 5000; // 5 seconds
+    
+    function updateBackground(timestamp) {
+        if (!lastUpdate || timestamp - lastUpdate >= interval) {
+            currentIndex = (currentIndex + 1) % images.length;
+            valPropElement.style.backgroundImage = `url(${images[currentIndex]})`;
+            lastUpdate = timestamp;
+        }
+        requestAnimationFrame(updateBackground);
+    }
+    
+    requestAnimationFrame(updateBackground);
 });
     
 const navigateToContact = () => {

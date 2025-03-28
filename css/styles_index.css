@@ -371,9 +371,9 @@ header nav a:active {
     /* justify-content: center; 
 } */
 
-#event1 {
-    /* display: none; */
-}
+/* #event1 {
+    display: none;
+} */
 
 .doubleImages {
     display: flex;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deliverance Church International Nyansiongo</title>
     <link rel="stylesheet" href="css/styles_index.css">
     <!-- Include jQuery -->
@@ -91,7 +91,7 @@
         </div>
     </section>
    <section id="upcomingEvents">
-    <h2>Past/Upcoming Events</h2> 
+    <h2>Upcoming/Past Events</h2> 
     <div id="events">
         <div id="leftArrowDiv">
             <button class="navArrow" id="leftArrow" type="button" onclick="handlePrevEvent()" title="Left Arrow">
@@ -99,6 +99,26 @@
             </button>
         </div>
         <ul id="projectsSwipe">
+            <li class="eventSec" id="event3">
+                    <aside class="event">
+                        <img class="easterConvImgs" src="images/Easter2025.png" alt="Easter Convention">
+                    </aside>
+                <aside class="eventP" id="easterConvP">
+                    <h3>Easter Convention</h3>
+                    <p class="eventPara">
+                        This year our annual Easter Convention will be taking place from April 17th to 21st, 2025.
+                        We will be having indoor sessions from 9:30am to 1:30pm in the church hall and outdoor sessions from 3:00pm at the Nyansiongo Town Council gardens.
+                        The ministers for the event will be;
+                    </p>
+                    <ul class="eventPara">
+                        <li>Rev. Gichiambati from Sirare</li>
+                        <li>Rev. Wycliffe Omurwa from Narok</li>
+                        <li>Ev. Nina Waryaro from Uganda</li>
+                        <li>Min. Beatrice Moses from Kisii</li>
+                    </ul>
+                    <p id="eventParaTag">All are welcome to join us!</p>
+                </aside>
+            </li>
             <li class="eventSec" id="event0">
                 <aside class="event">
                     <img src="images/PWN e-card.jpg" alt="Prayer Warriors' Network Mission">
@@ -402,11 +422,12 @@
             <h2>Map Direction</h2>
             <div id="map">
                 <iframe
+                    class="map-iframe"
                     frameborder="0"
-                    style="border:0"
                     src="https://www.google.com/maps/embed/v1/place?q=-0.7630853652954102,35.01589584350586&key=AIzaSyAEVToUyLLffJ_Hxxk7_xgr8ww7_lRY6C8"
+                    title="Google Maps location of Deliverance Church International Nyansiongo"
                     allowfullscreen>
-                 </iframe>
+                </iframe>
             </div>
         </aside>
         <aside id="Textbox">
