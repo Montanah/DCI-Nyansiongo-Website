@@ -1,3 +1,4 @@
 //Files not to be commited to git
 
 .env
+.DS_Store
