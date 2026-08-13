@@ -524,6 +524,12 @@ footer.site-footer {
   .footer-col ul {
     align-items: center;
   }
+
+  .footer-col a,
+  .footer-col p,
+  .footer-col address {
+    justify-content: center;
+  }
 }
 
 /* ==========================================================================
