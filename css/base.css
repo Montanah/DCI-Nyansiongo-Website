@@ -442,6 +442,32 @@ header.site-header.is-scrolled {
 }
 
 /* ==========================================================================
+   Page hero (About / Articles / Sermons banner)
+   ========================================================================== */
+.page-hero {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: var(--color-surface);
+  padding-block: var(--space-8);
+  text-align: center;
+}
+
+.page-hero .section-eyebrow {
+  color: var(--color-accent-light);
+}
+
+.page-hero h1 {
+  color: var(--color-surface);
+  font-size: var(--text-3xl);
+}
+
+.page-hero-lede {
+  max-width: 680px;
+  margin: var(--space-3) auto 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: var(--text-lg);
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 footer.site-footer {
@@ -525,10 +551,21 @@ footer.site-footer {
     align-items: center;
   }
 
-  .footer-col a,
-  .footer-col p,
   .footer-col address {
     justify-content: center;
+  }
+
+  /* Center the icon+text pair as a fixed-width block instead of centering
+     each row independently — otherwise rows with short text (e.g. a
+     single handle) and rows with long wrapped text (e.g. the Facebook
+     name) land at different horizontal positions, so the icons zigzag
+     instead of lining up. */
+  .footer-col a,
+  .footer-col p {
+    justify-content: flex-start;
+    max-width: 280px;
+    margin-inline: auto;
+    text-align: left;
   }
 }
 

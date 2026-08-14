@@ -1,7 +1,3 @@
-.page-hero--articles {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-}
-
 .articles-list {
   background: var(--color-surface);
 }

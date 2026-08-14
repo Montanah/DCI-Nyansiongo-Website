@@ -1,26 +1,3 @@
-.page-hero {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-  color: var(--color-surface);
-  padding-block: var(--space-8);
-  text-align: center;
-}
-
-.page-hero .section-eyebrow {
-  color: var(--color-accent-light);
-}
-
-.page-hero h1 {
-  color: var(--color-surface);
-  font-size: var(--text-3xl);
-}
-
-.page-hero-lede {
-  max-width: 680px;
-  margin: var(--space-3) auto 0;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: var(--text-lg);
-}
-
 .about-intro-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
