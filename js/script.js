@@ -99,9 +99,6 @@ function initHero() {
   slideA.classList.add('is-active');
   let showingA = true;
 
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefersReducedMotion) return;
-
   setInterval(() => {
     index = (index + 1) % images.length;
     const next = showingA ? slideB : slideA;
