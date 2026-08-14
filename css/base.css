@@ -563,7 +563,7 @@ footer.site-footer {
   .footer-col a,
   .footer-col p {
     justify-content: flex-start;
-    max-width: 280px;
+    width: min(280px, 100%);
     margin-inline: auto;
     text-align: left;
   }
