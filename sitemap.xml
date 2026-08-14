@@ -6,17 +6,17 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://deliverancechurchinternationalnyansiongo.org/aboutus.html</loc>
+    <loc>https://deliverancechurchinternationalnyansiongo.org/aboutus/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://deliverancechurchinternationalnyansiongo.org/sermons.html</loc>
+    <loc>https://deliverancechurchinternationalnyansiongo.org/sermons/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deliverancechurchinternationalnyansiongo.org/articles.html</loc>
+    <loc>https://deliverancechurchinternationalnyansiongo.org/articles/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

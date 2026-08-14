@@ -87,7 +87,7 @@ function initHero() {
   if (!slideA || !slideB) return;
 
   const totalImages = 22;
-  const images = Array.from({ length: totalImages }, (_, i) => `images/BgImg${i + 1}.webp`);
+  const images = Array.from({ length: totalImages }, (_, i) => `/images/BgImg${i + 1}.webp`);
 
   images.forEach((src) => {
     const preload = new Image();
