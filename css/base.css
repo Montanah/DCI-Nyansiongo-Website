@@ -504,7 +504,8 @@ footer.site-footer {
   margin: 0;
 }
 
-.footer-col ul {
+.footer-col ul,
+.contact-rows {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -547,18 +548,22 @@ footer.site-footer {
     text-align: center;
   }
 
-  /* Give the whole column one definite, centered width instead of letting
-     each row (ul/li/a/p) size and center itself independently — nested
-     elements each trying to auto-size around their own content is what
-     caused the icons to zigzag instead of lining up in a column. Every
-     child below simply stretches to fill this fixed-width box. */
-  .footer-col {
-    width: min(280px, 100%);
-    margin-inline: auto;
-  }
-
   .footer-col address {
     justify-content: center;
+  }
+
+  /* Size each row-group (the social list, the contact rows) to fit its
+     own widest row, then center that box — not a fixed-width box with
+     left-aligned content inside, which leaves a gap between the box's
+     center (where the heading above centers) and the content's actual
+     left-anchored position. Rows inside stretch to match the group's
+     width (flex default align-items: stretch), so every icon in the
+     group still lines up at the same x. */
+  .footer-col ul,
+  .contact-rows {
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
   }
 
   .footer-col a,
