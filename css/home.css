@@ -33,7 +33,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(120deg, rgba(18, 12, 43, 0.94) 30%, rgba(18, 12, 43, 0.55) 75%);
+  background: rgba(18, 12, 43, 0.72);
 }
 
 .hero-content {
