@@ -547,24 +547,23 @@ footer.site-footer {
     text-align: center;
   }
 
-  .footer-col ul {
-    align-items: center;
+  /* Give the whole column one definite, centered width instead of letting
+     each row (ul/li/a/p) size and center itself independently — nested
+     elements each trying to auto-size around their own content is what
+     caused the icons to zigzag instead of lining up in a column. Every
+     child below simply stretches to fill this fixed-width box. */
+  .footer-col {
+    width: min(280px, 100%);
+    margin-inline: auto;
   }
 
   .footer-col address {
     justify-content: center;
   }
 
-  /* Center the icon+text pair as a fixed-width block instead of centering
-     each row independently — otherwise rows with short text (e.g. a
-     single handle) and rows with long wrapped text (e.g. the Facebook
-     name) land at different horizontal positions, so the icons zigzag
-     instead of lining up. */
   .footer-col a,
   .footer-col p {
     justify-content: flex-start;
-    width: min(280px, 100%);
-    margin-inline: auto;
     text-align: left;
   }
 }
