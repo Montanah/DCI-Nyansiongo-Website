@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
   initFooterYear();
   initReveal();
-  initHero();
   initEventsCarousel();
   initSermonSearch();
+  initAudioPlayers();
   initContactForm();
 });
 
@@ -34,6 +34,13 @@ function initNav() {
       toggle.focus();
     }
   });
+
+  document.addEventListener('click', (event) => {
+    if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 }
 
 /* Header shadow once the page has scrolled */
@@ -57,16 +64,13 @@ function initReveal() {
   const items = document.querySelectorAll('.reveal');
   if (!items.length) return;
 
-  if (!('IntersectionObserver' in window)) {
-    items.forEach((el) => el.classList.add('is-visible'));
-    return;
-  }
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
+          entry.target.classList.remove('is-pending');
           observer.unobserve(entry.target);
         }
       });
@@ -74,40 +78,10 @@ function initReveal() {
     { threshold: 0.15 }
   );
 
-  items.forEach((el) => observer.observe(el));
-}
-
-/* Rotating hero background, crossfading between two layered slides */
-function initHero() {
-  const media = document.querySelector('.hero-media');
-  if (!media) return;
-
-  const slideA = media.querySelector('.hero-slide:nth-child(1)');
-  const slideB = media.querySelector('.hero-slide:nth-child(2)');
-  if (!slideA || !slideB) return;
-
-  const totalImages = 22;
-  const images = Array.from({ length: totalImages }, (_, i) => `/images/BgImg${i + 1}.webp`);
-
-  images.forEach((src) => {
-    const preload = new Image();
-    preload.src = src;
+  items.forEach((el) => {
+    el.classList.add('is-pending');
+    observer.observe(el);
   });
-
-  let index = 3 % images.length;
-  slideA.style.backgroundImage = `url(${images[index]})`;
-  slideA.classList.add('is-active');
-  let showingA = true;
-
-  setInterval(() => {
-    index = (index + 1) % images.length;
-    const next = showingA ? slideB : slideA;
-    const current = showingA ? slideA : slideB;
-    next.style.backgroundImage = `url(${images[index]})`;
-    next.classList.add('is-active');
-    current.classList.remove('is-active');
-    showingA = !showingA;
-  }, 5000);
 }
 
 /* Accessible events carousel: buttons, dots, keyboard arrows, touch/pointer swipe */
@@ -119,6 +93,7 @@ function initEventsCarousel() {
   if (!track || !dotsWrap || !prevBtn || !nextBtn) return;
 
   const slides = Array.from(track.children);
+  const viewport = track.parentElement;
   let index = 0;
 
   slides.forEach((_, i) => {
@@ -133,7 +108,16 @@ function initEventsCarousel() {
 
   function update() {
     track.style.transform = `translateX(-${index * 100}%)`;
-    dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('is-active', i === index);
+      dot.setAttribute('aria-current', String(i === index));
+    });
+    slides.forEach((slide, i) => {
+      slide.inert = i !== index;
+      slide.setAttribute('aria-hidden', String(i !== index));
+      slide.setAttribute('aria-label', `Event ${i + 1} of ${slides.length}`);
+    });
+    viewport.style.height = `${slides[index].offsetHeight}px`;
     prevBtn.disabled = index === 0;
     nextBtn.disabled = index === slides.length - 1;
   }
@@ -146,12 +130,12 @@ function initEventsCarousel() {
   prevBtn.addEventListener('click', () => goTo(index - 1));
   nextBtn.addEventListener('click', () => goTo(index + 1));
 
-  const viewport = track.parentElement;
   viewport.setAttribute('tabindex', '0');
   viewport.setAttribute('role', 'group');
   viewport.setAttribute('aria-roledescription', 'carousel');
-  viewport.setAttribute('aria-label', 'Upcoming and past events');
+  viewport.setAttribute('aria-label', 'Past church gatherings; use the left and right arrow keys to browse');
   viewport.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') event.preventDefault();
     if (event.key === 'ArrowLeft') goTo(index - 1);
     if (event.key === 'ArrowRight') goTo(index + 1);
   });
@@ -166,7 +150,17 @@ function initEventsCarousel() {
     if (Math.abs(diff) > 50) goTo(diff > 0 ? index + 1 : index - 1);
     startX = null;
   });
+  track.addEventListener('pointercancel', () => { startX = null; });
 
+  if ('ResizeObserver' in window) {
+    const observer = new ResizeObserver(() => {
+      viewport.style.height = `${slides[index].offsetHeight}px`;
+    });
+    slides.forEach((slide) => observer.observe(slide));
+  } else {
+    window.addEventListener('resize', update, { passive: true });
+    window.addEventListener('load', update);
+  }
   update();
 }
 
@@ -175,11 +169,12 @@ function initSermonSearch() {
   const input = document.getElementById('sermonSearch');
   const grid = document.getElementById('sermonGrid');
   const empty = document.getElementById('sermonEmpty');
+  const count = document.getElementById('sermonCount');
   if (!input || !grid) return;
 
   const cards = Array.from(grid.querySelectorAll('.sermon-card'));
 
-  input.addEventListener('input', () => {
+  const filter = () => {
     const query = input.value.trim().toLowerCase();
     let visibleCount = 0;
 
@@ -191,6 +186,23 @@ function initSermonSearch() {
     });
 
     if (empty) empty.hidden = visibleCount !== 0;
+    if (count) count.textContent = query
+      ? `${visibleCount} of ${cards.length} sermons found`
+      : `${cards.length} messages to encourage your faith`;
+  };
+  input.addEventListener('input', filter);
+  filter();
+}
+
+/* Keep recordings from playing over each other. */
+function initAudioPlayers() {
+  const players = document.querySelectorAll('audio');
+  players.forEach((player) => {
+    player.addEventListener('play', () => {
+      players.forEach((other) => {
+        if (other !== player) other.pause();
+      });
+    });
   });
 }
 
@@ -204,7 +216,10 @@ function initContactForm() {
     event.preventDefault();
 
     const submitBtn = form.querySelector('button[type="submit"]');
+    const buttonContent = submitBtn.innerHTML;
     submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    form.setAttribute('aria-busy', 'true');
     status.textContent = 'Sending…';
     status.className = 'form-status';
 
@@ -220,7 +235,7 @@ function initContactForm() {
 
       const result = await response.json();
 
-      if (result.success) {
+      if (response.ok && result.success) {
         status.textContent = "Thank you! We've received your message and will be in touch soon.";
         status.classList.add('is-success');
         form.reset();
@@ -232,6 +247,8 @@ function initContactForm() {
       status.classList.add('is-error');
     } finally {
       submitBtn.disabled = false;
+      submitBtn.innerHTML = buttonContent;
+      form.removeAttribute('aria-busy');
     }
   });
 }

@@ -7,7 +7,7 @@
     <title>Sermon Archive | Deliverance Church International Nyansiongo</title>
     <meta name="description" content="Browse and listen to sermons aired on Radio Vuna 102.0 FM by Deliverance Church International Nyansiongo. Search the full archive by title.">
     <link rel="canonical" href="https://deliverancechurchinternationalnyansiongo.org/sermons/">
-    <meta name="theme-color" content="#1b1340">
+    <meta name="theme-color" content="#f8f6f1">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Deliverance Church International Nyansiongo">
@@ -21,6 +21,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon-512.png">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
+    <link rel="preload" href="/fonts/instrument-serif.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/sermons.css">
     <script defer src="/js/script.js"></script>
@@ -34,7 +35,7 @@
         gtag('config', 'G-6EZD4ZRZ76');
     </script>
 </head>
-<body>
+<body class="sermons-page">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
@@ -57,9 +58,10 @@
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/aboutus/">About Us</a></li>
-                    <li><a href="/sermons/">Sermons</a></li>
+                    <li><a href="/sermons/" aria-current="page">Sermons</a></li>
                     <li><a href="/articles/">Articles</a></li>
-                    <li><a href="/#contact">Contact Us</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                    <li><a class="nav-cta" href="/#programs">Plan a visit <span aria-hidden="true">↗</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -67,140 +69,177 @@
 
     <main id="main">
         <section class="page-hero">
-            <div class="container">
+            <div class="container"><div class="page-hero-copy">
                 <p class="section-eyebrow">Listen &amp; Grow</p>
-                <h1>Sermon Archive</h1>
-                <p class="page-hero-lede">Every sermon aired on Radio Vuna 102.0 FM, all in one place. Search by title or browse the full list below.</p>
+                <h1>Make room<br>for <em>the Word.</em></h1>
+                <p class="page-hero-lede">Every sermon aired on Radio Vuna 102.0 FM, all in one place. Search by title or browse the full list below.</p></div>
+                <img class="page-hero-photo" src="/images/BgImg16.webp" alt="Sharing the Word of God at DCI Nyansiongo" width="640" height="420" fetchpriority="high">
             </div>
         </section>
 
         <section class="section sermons-archive">
             <div class="container">
-                <div class="sermon-search">
+                <div class="archive-toolbar"><div><p class="section-eyebrow">The sermon archive</p><p id="sermonCount" class="sermon-count" role="status" aria-live="polite">Browse all sermons</p></div><div class="sermon-search">
                     <label class="visually-hidden" for="sermonSearch">Search sermons by title</label>
                     <input type="search" id="sermonSearch" placeholder="Search sermons by title&hellip;">
                 </div>
-                <div class="sermon-grid" id="sermonGrid">
+                </div><div class="sermon-grid" id="sermonGrid">
                     <article class="sermon-card" data-title="A Short Christmas Message">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>A Short Christmas Message</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/A Short Christmas Message.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to A Short Christmas Message" controls preload="none"><source src="/Audio Messages/A Short Christmas Message.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="A Short New Year 2024 Message">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>A Short New Year 2024 Message</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/A Short New Year 2024  Message.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to A Short New Year 2024 Message" controls preload="none"><source src="/Audio Messages/A Short New Year 2024  Message.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="Celebrating Christmas">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>Celebrating Christmas</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/Celebrating Christmas.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to Celebrating Christmas" controls preload="none"><source src="/Audio Messages/Celebrating Christmas.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="Christians are letters to be read">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>Christians are Letters to be Read</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/Christians are Letters to be Read .mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to Christians are Letters to be Read" controls preload="none"><source src="/Audio Messages/Christians are Letters to be Read .mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="Cross over the Jordan River and Destroy">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>Cross over the Jordan River and Destroy</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/Cross over the Jordan River and Destroy.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to Cross over the Jordan River and Destroy" controls preload="none"><source src="/Audio Messages/Cross over the Jordan River and Destroy.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="False Religions & Teachings Part 1">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>False Religions &amp; Teachings (Part 1)</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/False Religions & Teachings Part 1.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to False Religions &amp; Teachings (Part 1)" controls preload="none"><source src="/Audio Messages/False Religions & Teachings Part 1.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="False Religions & Teachings Part 2">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>False Religions &amp; Teachings (Part 2)</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/False Religions & Teachings Part 2.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to False Religions &amp; Teachings (Part 2)" controls preload="none"><source src="/Audio Messages/False Religions & Teachings Part 2.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="False Religions & Teachings Part 3">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>False Religions &amp; Teachings (Part 3)</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/False Religions & Teachings Part 3.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to False Religions &amp; Teachings (Part 3)" controls preload="none"><source src="/Audio Messages/False Religions & Teachings Part 3.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="False Religions & Teachings Part 4">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>False Religions &amp; Teachings (Part 4)</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/False Religions & Teachings Part 4.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to False Religions &amp; Teachings (Part 4)" controls preload="none"><source src="/Audio Messages/False Religions & Teachings Part 4.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="False Religions & Teachings Part 5">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>False Religions &amp; Teachings (Part 5)</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/False Religions &Teachings Part 5.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to False Religions &amp; Teachings (Part 5)" controls preload="none"><source src="/Audio Messages/False Religions &Teachings Part 5.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="Freedom from Slavery">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>Freedom from Slavery</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/Freedom from Slavery.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to Freedom from Slavery" controls preload="none"><source src="/Audio Messages/Freedom from Slavery.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="God's Grace is Abundant for All">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>God's Grace is Abundant for All</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/God's Grace is Abundant for All.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to God's Grace is Abundant for All" controls preload="none"><source src="/Audio Messages/God's Grace is Abundant for All.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="In The Times of Ignorance">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>In The Times of Ignorance</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/In The Times of Ignorance (1).m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to In The Times of Ignorance" controls preload="none"><source src="/Audio Messages/In The Times of Ignorance (1).m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="Learn to Give Thanks">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>Learn to Give Thanks</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/Learn to Give Thanks.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to Learn to Give Thanks" controls preload="none"><source src="/Audio Messages/Learn to Give Thanks.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="Listening to Other Voices">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>Listening to Other Voices</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/Listening to Other Voices.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to Listening to Other Voices" controls preload="none"><source src="/Audio Messages/Listening to Other Voices.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="Taking Stock of the year 2023">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>Taking Stock of the Year 2023</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/Taking Stock of the year 2023.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to Taking Stock of the Year 2023" controls preload="none"><source src="/Audio Messages/Taking Stock of the year 2023.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="The History of Deliverance Church Nyansiongo">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>The History of Deliverance Church Nyansiongo</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/The History of Deliverance Church Nyansiongo (1).m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to The History of Deliverance Church Nyansiongo" controls preload="none"><source src="/Audio Messages/The History of Deliverance Church Nyansiongo (1).m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="The Lame Man Receives Healing">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>The Lame Man Receives Healing</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/The Lame Man Receives Healing (1).m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to The Lame Man Receives Healing" controls preload="none"><source src="/Audio Messages/The Lame Man Receives Healing (1).m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="The Power of the Spoken Word">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>The Power of the Spoken Word</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/The Power of the Spoken Word.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to The Power of the Spoken Word" controls preload="none"><source src="/Audio Messages/The Power of the Spoken Word.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="The Rich Fool">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>The Rich Fool</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/The Rich Fool.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to The Rich Fool" controls preload="none"><source src="/Audio Messages/The Rich Fool.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="The Second Coming of Jesus Christ">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>The Second Coming of Jesus Christ</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/The Second Coming of Jesus Christ .mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to The Second Coming of Jesus Christ" controls preload="none"><source src="/Audio Messages/The Second Coming of Jesus Christ .mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="The Ways of God">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>The Ways of God</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/The Ways of God .mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to The Ways of God" controls preload="none"><source src="/Audio Messages/The Ways of God .mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="We Are God's Holy Temple">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>We Are God's Holy Temple</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/We Are God's Holy Temple.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to We Are God's Holy Temple" controls preload="none"><source src="/Audio Messages/We Are God's Holy Temple.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="What is Good Friday? (Part 1)">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>What is Good Friday? (Part 1)</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/What is Good Friday Part 1.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to What is Good Friday? (Part 1)" controls preload="none"><source src="/Audio Messages/What is Good Friday Part 1.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="What is Good Friday? (Part 2)">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>What is Good Friday? (Part 2)</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/What's Good Friday Part 2.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to What is Good Friday? (Part 2)" controls preload="none"><source src="/Audio Messages/What's Good Friday Part 2.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="When we limit God">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>When We Limit God</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/When we limit God.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to When We Limit God" controls preload="none"><source src="/Audio Messages/When we limit God.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="When will the kingdom of God come">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>When Will the Kingdom of God Come</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/When will the kingdom of God come .mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to When Will the Kingdom of God Come" controls preload="none"><source src="/Audio Messages/When will the kingdom of God come .mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
                     </article>
                     <article class="sermon-card" data-title="Whom Shall You Serve">
+                        <p class="sermon-label"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2m4 6V7m4 14V3m4 14V7m4 6v-2"/></svg> Radio Vuna · 102.0 FM</p>
                         <h3>Whom Shall You Serve</h3>
-                        <audio controls preload="none"><source src="/Audio Messages/Whom Shall You Serve .mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+                        <audio aria-label="Listen to Whom Shall You Serve" controls preload="none"><source src="/Audio Messages/Whom Shall You Serve .mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
                     </article>
                 </div>
                 <p class="sermon-empty" id="sermonEmpty" hidden>No sermons match your search.</p>
             </div>
         </section>
+        <section class="page-invitation"><p class="section-eyebrow">You are welcome here</p><h2>Let’s grow in faith. Together.</h2><p>Join our church family in Nyansiongo.</p><a class="btn btn-dark" href="/#programs">Plan your visit <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></section>
     </main>
 
     <footer class="site-footer">
         <div class="container">
+            <div class="footer-intro"><a class="brand" href="/">
+                <img src="/images/Logo.png" alt="Deliverance Church International Nyansiongo logo" width="60" height="60">
+                <span class="brand-text">
+                    <span class="brand-name">Deliverance Church<br>International Nyansiongo</span>
+                    <span class="brand-tagline">The Mountain of Truth</span>
+                </span>
+            </a><p>There is a place for you here.</p></div>
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>Location</h3>
@@ -218,13 +257,14 @@
                 <div class="footer-col">
                     <h3>Our Contacts</h3>
                     <div class="contact-rows">
-                        <p><img class="social-icon" src="/images/PhoneLogo.png" alt="" width="20" height="20">+254 759 427 543</p>
+                        <a href="tel:+254759427543"><img class="social-icon" src="/images/PhoneLogo.png" alt="" width="20" height="20">+254 759 427 543</a>
                         <a href="mailto:dcnyansiongo@gmail.com"><img class="social-icon" src="/images/EmailLogo.png" alt="" width="20" height="20">dcnyansiongo@gmail.com</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>Deliverance Church International Nyansiongo &copy; <span id="footerYear">2026</span></p>
+                <a href="#main">Back to top ↑</a>
             </div>
         </div>
     </footer>
