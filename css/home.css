@@ -257,3 +257,7 @@
 @media (max-width: 680px) {
   .form-field input, .form-field textarea { font-size: 1rem; }
 }
+
+.form-verification { margin-block: 20px 12px; }
+.form-help { font-size: .75rem; color: var(--color-ink-soft); margin-bottom: 20px; }
+.contact-form-wrap .btn:disabled { opacity: .65; transform: none; cursor: wait; }

@@ -1,4 +1,12 @@
-//Files not to be commited to git
-
+# Local configuration and credentials
 .env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local tooling output
 .DS_Store
+node_modules/
+playwright-report/
+test-results/

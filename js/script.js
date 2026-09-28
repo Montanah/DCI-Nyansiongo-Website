@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initEventsCarousel();
   initSermonSearch();
   initAudioPlayers();
-  initContactForm();
 });
 
 /* Mobile nav toggle */
@@ -203,52 +202,5 @@ function initAudioPlayers() {
         if (other !== player) other.pause();
       });
     });
-  });
-}
-
-/* Contact form submission via Web3Forms (static-site friendly, no backend needed) */
-function initContactForm() {
-  const form = document.getElementById('contactForm');
-  const status = document.getElementById('formStatus');
-  if (!form || !status) return;
-
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const buttonContent = submitBtn.innerHTML;
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
-    form.setAttribute('aria-busy', 'true');
-    status.textContent = 'Sending…';
-    status.className = 'form-status';
-
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify(Object.fromEntries(new FormData(form))),
-      });
-
-      const result = await response.json();
-
-      if (response.ok && result.success) {
-        status.textContent = "Thank you! We've received your message and will be in touch soon.";
-        status.classList.add('is-success');
-        form.reset();
-      } else {
-        throw new Error(result.message || 'Submission failed');
-      }
-    } catch (error) {
-      status.textContent = 'Sorry, your message could not be sent right now. Please try again or call us directly.';
-      status.classList.add('is-error');
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = buttonContent;
-      form.removeAttribute('aria-busy');
-    }
   });
 }
