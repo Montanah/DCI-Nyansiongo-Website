@@ -1,0 +1,6 @@
+# Keep development notes and test tooling out of the GitHub Pages output.
+exclude:
+  - Readme.md
+  - SECURITY.md
+  - scripts
+  - tests
