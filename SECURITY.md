@@ -113,7 +113,7 @@ Run with Node.js 24 (no npm installation is needed):
 
 ```sh
 node scripts/security-policy.mjs --check
-node --test tests/security.test.mjs
+node --test tests/*.test.mjs
 node --check js/script.js
 node --check js/analytics.js
 node --check js/contact.mjs

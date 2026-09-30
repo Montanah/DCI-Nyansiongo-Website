@@ -7,6 +7,7 @@ const buttonLabel = document.getElementById('submitLabel');
 
 if (form && status && submitButton && buttonLabel) {
   let pending = false;
+  const loadVerification = initContactVerification(form);
   submitButton.disabled = false;
 
   const showStatus = (message, kind = '') => {
@@ -16,6 +17,7 @@ if (form && status && submitButton && buttonLabel) {
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
+    loadVerification();
     if (pending || !form.reportValidity()) return;
 
     let payload;
@@ -77,4 +79,73 @@ if (form && status && submitButton && buttonLabel) {
       if (typeof window.hcaptcha?.reset === 'function') window.hcaptcha.reset();
     }
   });
+}
+
+/* Load hCaptcha near the form or on keyboard/pointer interaction, never at the
+   top of the homepage. Explicit rendering waits for the provider's ready callback. */
+function initContactVerification(contactForm) {
+  const container = contactForm.querySelector('.h-captcha');
+  const notice = document.getElementById('verificationStatus');
+  const retry = document.getElementById('retryVerification');
+  let state = 'idle';
+  let observer;
+  let script;
+  let timer;
+
+  function failed() {
+    if (state !== 'loading') return;
+    window.clearTimeout(timer);
+    state = 'failed';
+    script?.removeEventListener('error', failed);
+    script?.remove();
+    notice.textContent = 'Verification could not load. Please retry, or contact us by email or phone.';
+    retry.hidden = false;
+  }
+
+  window.onContactVerificationReady = () => {
+    if (state === 'ready') return;
+    try {
+      window.hcaptcha.render(container, {
+        sitekey: container.dataset.sitekey,
+        size: container.dataset.size,
+      });
+      window.clearTimeout(timer);
+      script?.removeEventListener('error', failed);
+      state = 'ready';
+      notice.textContent = '';
+      retry.hidden = true;
+      observer?.disconnect();
+      contactForm.removeEventListener('focusin', load);
+      contactForm.removeEventListener('pointerdown', load);
+    } catch {
+      failed();
+    }
+  };
+
+  function load() {
+    if (state === 'loading' || state === 'ready') return;
+    state = 'loading';
+    notice.textContent = 'Loading verification…';
+    retry.hidden = true;
+    script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://js.hcaptcha.com/1/api.js?render=explicit&onload=onContactVerificationReady&recaptchacompat=off';
+    script.addEventListener('error', failed, { once: true });
+    timer = window.setTimeout(failed, 15000);
+    document.head.append(script);
+  }
+
+  retry.addEventListener('click', load);
+  contactForm.addEventListener('focusin', load);
+  contactForm.addEventListener('pointerdown', load, { passive: true });
+  if ('IntersectionObserver' in window) {
+    observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        observer.disconnect();
+        load();
+      }
+    }, { rootMargin: '600px 0px' });
+    observer.observe(contactForm);
+  }
+  return load;
 }
