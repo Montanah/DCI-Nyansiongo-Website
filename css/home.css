@@ -24,8 +24,9 @@
 .visit-strip-heading span, .visit-time > span { display: block; font-size: .5625rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--color-ink-soft); }
 .visit-strip-heading strong { display: block; font-family: var(--font-heading); font-size: 1.5rem; font-weight: 400; margin-top: 4px; }
 .visit-time { border-left: 1px solid var(--color-border); padding-left: 26px; }
-.visit-time strong { display: block; font-size: 1rem; font-weight: 500; margin-top: 6px; white-space: nowrap; }
-.visit-time small { font-size: .75rem; color: var(--color-ink-soft); }
+.visit-time > span { font-size: .75rem; }
+.visit-time strong { display: block; font-size: 1.25rem; font-weight: 600; margin-top: 6px; font-variant-numeric: tabular-nums; }
+.visit-time small { font-size: var(--service-time-size); color: var(--color-ink-soft); white-space: nowrap; }
 .visit-direction { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--color-border); border-radius: 50%; transition: background var(--transition); }
 .visit-direction:hover { background: var(--color-accent); }
 
@@ -50,16 +51,18 @@
 .program-top > span { font-size: .5625rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; }
 .program-card h3 { font-size: clamp(1.7rem, 2.5vw, 2.1rem); line-height: 1.1; margin-bottom: 24px; }
 .program-card > p { display: flex; align-items: center; gap: 8px; color: var(--color-ink-soft); font-size: .75rem; margin: 0; }
+.program-card > .service-time { font-size: var(--service-time-size); }
 .program-card p svg { width: 14px; height: 14px; }
+.program-card .service-time svg { width: 18px; height: 18px; }
 .program-card .program-detail { margin: -16px 0 8px; font-size: .625rem; }
 .program-card--sunday { grid-row: span 2; background: var(--color-primary); color: white; padding: 32px; border-color: var(--color-primary); }
 .program-card--sunday h3 { font-size: 3.5rem; color: white; margin: 32px 0 12px; }
 .program-card--sunday .program-top { color: var(--color-accent); }
 .program-card--sunday .program-description { color: #d0c8d1; font-size: .8125rem; }
 .sunday-times { margin-block: 30px; }
-.sunday-times p { display: flex; justify-content: space-between; gap: 14px; border-top: 1px solid #ffffff24; padding-block: 10px; margin: 0; font-size: .6875rem; }
+.sunday-times p { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 14px; border-top: 1px solid #ffffff24; padding-block: 12px; margin: 0; font-size: .875rem; }
 .sunday-times span { color: #d0c8d1; }
-.sunday-times strong { font-weight: 500; }
+.sunday-times strong { font-size: var(--service-time-size); font-weight: 600; font-variant-numeric: tabular-nums; }
 .program-card--sunday .text-link { color: var(--color-accent); font-size: .75rem; }
 
 /* Annual theme */
@@ -208,8 +211,7 @@
   .hero-bottom a svg { flex-shrink: 0; }
   .visit-strip { gap: 20px 14px; }
   .visit-time { padding-left: 12px; }
-  .visit-time strong { font-size: .8125rem; }
-  .visit-time small { display: block; font-size: .6875rem; margin-top: 3px; }
+  .visit-time small { display: block; margin-top: 3px; }
   .visit-strip-heading strong { font-size: 1.5rem; }
   .program-grid { grid-template-columns: 1fr; }
   .program-card--sunday { grid-row: auto; }
@@ -241,6 +243,9 @@
   .contact-form-wrap, .visit-card-copy { padding: 28px; }
 }
 @media (max-width: 440px) {
+  .visit-strip { grid-template-columns: 1fr; gap: 16px; }
+  .visit-time { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0 0; border-left: 0; border-top: 1px solid var(--color-border); }
+  .visit-time strong { margin-top: 0; text-align: right; }
   .sermons .sermon-grid { grid-template-columns: minmax(0, 1fr); }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .hero-bottom { gap: 8px; }
