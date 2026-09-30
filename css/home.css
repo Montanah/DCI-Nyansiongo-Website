@@ -71,7 +71,7 @@
 .theme-banner h2 em { color: var(--color-accent); }
 .theme-banner cite { font-style: normal; font-size: .6875rem; letter-spacing: .1em; text-transform: uppercase; color: #c8c0cc; }
 .theme-artwork { display: block; border: 1px solid #ffffff30; padding: 9px; border-radius: 12px; background: #ffffff05; }
-.theme-artwork img { width: 100%; border-radius: 6px; }
+.theme-artwork img { width: 100%; height: auto; border-radius: 6px; }
 
 /* Past church gatherings */
 .events .section-header { text-align: center; }
@@ -80,7 +80,7 @@
 .carousel-viewport { flex: 1; min-width: 0; overflow: hidden; border: 1px solid var(--color-border); background: var(--color-surface); border-radius: 20px; }
 .carousel-track { display: flex; list-style: none; transition: transform .45s ease; touch-action: pan-y; align-items: flex-start; }
 .event-slide { flex: 0 0 100%; min-width: 0; display: grid; grid-template-columns: 1fr 1.1fr; align-items: center; gap: 40px; padding: 32px; }
-.event-media img { width: 100%; max-height: 420px; object-fit: contain; border-radius: 10px; }
+.event-media img { width: 100%; height: auto; max-height: 420px; object-fit: contain; border-radius: 10px; }
 .event-media--double { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
 .event-body h3 { font-size: 2.25rem; line-height: 1.12; margin-bottom: 20px; }
 .event-body p:not(.section-eyebrow), .event-body ul { font-size: .8125rem; color: var(--color-ink-soft); }
@@ -117,7 +117,7 @@
 .pastors-desk-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: center; background: #eee9df; border-radius: 24px; padding: 56px; }
 .pastors-portrait { position: relative; isolation: isolate; align-self: stretch; display: flex; flex-direction: column; justify-content: flex-end; min-height: 350px; }
 .portrait-arch { position: absolute; inset: 0 10% 40px; background: #dcd3c3; border-radius: 50% 50% 4px 4px; z-index: -1; }
-.pastors-portrait > img { width: 100%; }
+.pastors-portrait > img { width: 100%; height: auto; }
 .portrait-caption { font-size: .5625rem; text-transform: uppercase; letter-spacing: .18em; text-align: center; padding-top: 24px; color: var(--color-ink-soft); }
 .pastors-desk h2 { font-size: 3.75rem; margin-bottom: 28px; }
 .pastors-desk blockquote { margin: 0 0 24px; color: var(--color-ink-soft); font-size: .875rem; line-height: 1.9; }
@@ -253,5 +253,7 @@
 }
 
 .form-verification { margin-block: 20px 12px; }
+.form-verification .h-captcha { min-height: 144px; }
+.verification-retry { margin-top: 8px; padding: 8px 12px; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-bg); color: var(--color-ink); font-size: .8125rem; }
 .form-help { font-size: .75rem; color: var(--color-ink-soft); margin-bottom: 20px; }
 .contact-form-wrap .btn:disabled { opacity: .65; transform: none; cursor: wait; }

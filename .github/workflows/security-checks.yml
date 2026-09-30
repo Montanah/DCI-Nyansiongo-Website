@@ -28,4 +28,4 @@ jobs:
       - name: Check security policies and contact validation
         run: |
           node scripts/security-policy.mjs --check
-          node --test tests/security.test.mjs
+          node --test tests/*.test.mjs

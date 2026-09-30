@@ -6,7 +6,30 @@ document.addEventListener('DOMContentLoaded', () => {
   initEventsCarousel();
   initSermonSearch();
   initAudioPlayers();
+  initLazyEmbeds();
 });
+
+/* Keep video and map downloads away from the first screen. Native iframe lazy
+   loading can start several screens ahead, before the page layout settles. */
+function initLazyEmbeds() {
+  const frames = document.querySelectorAll('iframe[data-src]');
+  const load = (frame) => {
+    frame.src = frame.dataset.src;
+    frame.removeAttribute('data-src');
+  };
+  if (!('IntersectionObserver' in window)) {
+    frames.forEach(load);
+    return;
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      load(entry.target);
+      observer.unobserve(entry.target);
+    });
+  }, { rootMargin: '400px 0px' });
+  frames.forEach(frame => observer.observe(frame));
+}
 
 /* Mobile nav toggle */
 function initNav() {
