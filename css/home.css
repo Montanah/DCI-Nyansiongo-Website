@@ -3,17 +3,17 @@
 .hero-image { position: absolute; inset: 0 0 0 auto; width: 76%; height: 100%; object-fit: cover; object-position: 64% center; z-index: -3; }
 .hero-scrim { position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, #211b27 0%, #211b27f5 25%, #211b27b3 48%, #211b2712 85%), linear-gradient(0deg, #211b27b8, transparent 40%); }
 .hero-content { position: relative; padding-block: 54px 26px; }
-.hero-eyebrow { display: flex; align-items: center; gap: 10px; color: #eee3d5; text-transform: uppercase; font-size: .625rem; letter-spacing: .18em; margin-bottom: 32px; }
+.hero-eyebrow { display: flex; align-items: center; gap: 10px; color: #eee3d5; text-transform: uppercase; font-size: .6875rem; letter-spacing: .18em; margin-bottom: 32px; }
 .hero-eyebrow span { width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); box-shadow: 0 0 0 5px #e8c89d12; }
 .hero h1 { font-size: clamp(4rem, 7.4vw, 7.2rem); line-height: .95; color: var(--color-surface); font-weight: 400; letter-spacing: -.025em; max-width: 720px; margin-bottom: 26px; }
 .hero h1 em { color: var(--color-accent); font-weight: 400; }
 .hero-text { font-size: .9375rem; line-height: 1.8; color: #e0d9e1; max-width: 405px; margin-bottom: 28px; }
 .hero-actions { display: flex; align-items: center; gap: 26px; }
-.hero-listen { display: inline-flex; align-items: center; gap: 10px; font-size: .75rem; text-decoration: none; }
+.hero-listen { display: inline-flex; align-items: center; gap: 10px; font-size: .8125rem; text-decoration: none; }
 .hero-listen > span { display: grid; place-items: center; width: 35px; height: 35px; border-radius: 50%; border: 1px solid #ffffff50; transition: background var(--transition); }
 .hero-listen svg { width: 12px; height: 12px; }
 .hero-listen:hover > span { background: #ffffff20; }
-.hero-bottom { display: flex; gap: 36px; align-items: center; margin-top: 54px; padding-top: 22px; border-top: 1px solid #ffffff24; max-width: 580px; color: #d4ccd5; font-size: .625rem; }
+.hero-bottom { display: flex; gap: 36px; align-items: center; margin-top: 54px; padding-top: 22px; border-top: 1px solid #ffffff24; max-width: 580px; color: #d4ccd5; font-size: .75rem; }
 .hero-bottom > span, .hero-bottom a { display: inline-flex; align-items: center; gap: 9px; }
 .hero-bottom a { text-decoration: none; }
 .hero-bottom svg { width: 13px; height: 13px; }
@@ -21,7 +21,7 @@
 .visit-strip { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.15fr auto; align-items: center; gap: 30px; padding-block: 35px; border-bottom: 1px solid var(--color-border); }
 .visit-strip-heading { display: flex; gap: 16px; align-items: center; }
 .visit-strip-heading > svg { width: 37px; height: 37px; color: var(--color-accent-dark); }
-.visit-strip-heading span, .visit-time > span { display: block; font-size: .5625rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--color-ink-soft); }
+.visit-strip-heading span, .visit-time > span { display: block; font-size: .6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--color-ink-soft); }
 .visit-strip-heading strong { display: block; font-family: var(--font-heading); font-size: 1.5rem; font-weight: 400; margin-top: 4px; }
 .visit-time { border-left: 1px solid var(--color-border); padding-left: 26px; }
 .visit-time > span { font-size: .75rem; }
@@ -40,7 +40,7 @@
 .purpose-item > span { font-size: .6875rem; color: var(--color-accent-dark); margin-top: 8px; }
 .purpose-item h3 { font-size: 1.75rem; margin-bottom: 10px; }
 .purpose-item p { font-size: .875rem; color: var(--color-ink-soft); margin-bottom: 6px; }
-.purpose-item cite { font-size: .625rem; font-style: normal; letter-spacing: .06em; color: var(--color-accent-dark); }
+.purpose-item cite { font-size: .6875rem; font-style: normal; letter-spacing: .06em; color: var(--color-accent-dark); }
 
 /* Five weekly programs, with Sunday as the main invitation. */
 .programs { background: #eeeae3; }
@@ -48,22 +48,22 @@
 .program-card { background: var(--color-surface); padding: 28px; border-radius: 16px; border: 1px solid #e2ded7; min-width: 0; }
 .program-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--color-accent-dark); margin-bottom: 26px; }
 .program-top > svg { width: 24px; height: 24px; }
-.program-top > span { font-size: .5625rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; }
+.program-top > span { font-size: .6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; }
 .program-card h3 { font-size: clamp(1.7rem, 2.5vw, 2.1rem); line-height: 1.1; margin-bottom: 24px; }
-.program-card > p { display: flex; align-items: center; gap: 8px; color: var(--color-ink-soft); font-size: .75rem; margin: 0; }
+.program-card > p { display: flex; align-items: center; gap: 8px; color: var(--color-ink-soft); font-size: .875rem; margin: 0; }
 .program-card > .service-time { font-size: var(--service-time-size); }
 .program-card p svg { width: 14px; height: 14px; }
 .program-card .service-time svg { width: 18px; height: 18px; }
-.program-card .program-detail { margin: -16px 0 8px; font-size: .625rem; }
+.program-card .program-detail { margin: -16px 0 8px; font-size: .6875rem; }
 .program-card--sunday { grid-row: span 2; background: var(--color-primary); color: white; padding: 32px; border-color: var(--color-primary); }
 .program-card--sunday h3 { font-size: 3.5rem; color: white; margin: 32px 0 12px; }
 .program-card--sunday .program-top { color: var(--color-accent); }
-.program-card--sunday .program-description { color: #d0c8d1; font-size: .8125rem; }
+.program-card--sunday .program-description { color: #d0c8d1; font-size: .9375rem; }
 .sunday-times { margin-block: 30px; }
 .sunday-times p { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 14px; border-top: 1px solid #ffffff24; padding-block: 12px; margin: 0; font-size: .875rem; }
 .sunday-times span { color: #d0c8d1; }
 .sunday-times strong { font-size: var(--service-time-size); font-weight: 600; font-variant-numeric: tabular-nums; }
-.program-card--sunday .text-link { color: var(--color-accent); font-size: .75rem; }
+.program-card--sunday .text-link { color: var(--color-accent); font-size: .8125rem; }
 
 /* Annual theme */
 .theme-banner { background: var(--color-primary-dark); color: white; padding-block: 64px; position: relative; overflow: hidden; }
@@ -78,7 +78,7 @@
 
 /* Past church gatherings */
 .events .section-header { text-align: center; }
-.events .section-lede { margin-inline: auto; font-size: .875rem; }
+.events .section-lede { margin-inline: auto; font-size: .9375rem; }
 .carousel { display: flex; align-items: center; gap: 24px; }
 .carousel-viewport { flex: 1; min-width: 0; overflow: hidden; border: 1px solid var(--color-border); background: var(--color-surface); border-radius: 20px; }
 .carousel-track { display: flex; list-style: none; transition: transform .45s ease; touch-action: pan-y; align-items: flex-start; }
@@ -86,10 +86,10 @@
 .event-media img { width: 100%; height: auto; max-height: 420px; object-fit: contain; border-radius: 10px; }
 .event-media--double { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
 .event-body h3 { font-size: 2.25rem; line-height: 1.12; margin-bottom: 20px; }
-.event-body p:not(.section-eyebrow), .event-body ul { font-size: .8125rem; color: var(--color-ink-soft); }
+.event-body p:not(.section-eyebrow), .event-body ul { font-size: .9375rem; color: var(--color-ink-soft); }
 .event-body ul { padding-left: 18px; margin-bottom: 20px; }
-.event-body .section-eyebrow { font-size: .5625rem; }
-.event-tag { display: inline-block; font-size: .6875rem; color: var(--color-accent-dark); background: #f6efdf; border-radius: 6px; padding: 6px 12px; }
+.event-body .section-eyebrow { font-size: .6875rem; }
+.event-tag { display: inline-block; font-size: .8125rem; color: var(--color-accent-dark); background: #f6efdf; border-radius: 6px; padding: 6px 12px; }
 .carousel-dots { display: flex; justify-content: center; gap: 2px; margin-top: 20px; }
 .carousel-dot { display: grid; place-items: center; width: 32px; height: 32px; padding: 0; border: none; background: transparent; }
 .carousel-dot::before { content: ''; width: 6px; height: 6px; border-radius: 10px; background: #c5bfb7; transition: width var(--transition); }
@@ -99,11 +99,11 @@
 .sermons { background: #eae6df; }
 .sermons .section-header { text-align: center; }
 .sermons .section-title { color: var(--color-primary); }
-.sermons .section-lede { color: var(--color-ink-soft); margin-inline: auto; font-size: .875rem; }
+.sermons .section-lede { color: var(--color-ink-soft); margin-inline: auto; font-size: .9375rem; }
 .sermons .sermon-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .sermons .sermon-card { padding: 22px 20px; }
-.sermons .sermon-card h3 { font-size: .875rem; }
-.sermons .sermon-label { font-size: .5625rem; gap: 7px; }
+.sermons .sermon-card h3 { font-size: .9375rem; }
+.sermons .sermon-label { font-size: .6875rem; gap: 7px; }
 .sermons-cta { text-align: center; margin-top: 36px; }
 .sermons-cta .btn { background: var(--color-primary); color: white; }
 .sermons-cta .btn:hover { background: var(--color-primary-light); }
@@ -111,9 +111,9 @@
 .video-wrap { aspect-ratio: 16/9; position: relative; overflow: hidden; border-radius: 18px; background: var(--color-primary); }
 .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .partners h2 { font-size: 3rem; }
-.partners > p:not(.section-eyebrow) { font-size: .875rem; color: var(--color-ink-soft); }
-.partners > img { height: 65px; width: auto; margin-top: 30px; }
-.partners .text-link { font-size: .75rem; }
+.partners > p:not(.section-eyebrow) { font-size: .9375rem; color: var(--color-ink-soft); }
+.partners > img { height: 96px; width: auto; margin-top: 32px; }
+.partners .text-link { font-size: .8125rem; }
 
 /* A personal welcome */
 .pastors-desk { padding-top: 20px; }
@@ -121,17 +121,18 @@
 .pastors-portrait { position: relative; isolation: isolate; align-self: stretch; display: flex; flex-direction: column; justify-content: flex-end; min-height: 350px; }
 .portrait-arch { position: absolute; inset: 0 10% 40px; background: #dcd3c3; border-radius: 50% 50% 4px 4px; z-index: -1; }
 .pastors-portrait > img { width: 100%; height: auto; }
-.portrait-caption { font-size: .5625rem; text-transform: uppercase; letter-spacing: .18em; text-align: center; padding-top: 24px; color: var(--color-ink-soft); }
+.portrait-caption { font-size: .6875rem; text-transform: uppercase; letter-spacing: .18em; text-align: center; padding-top: 24px; color: var(--color-ink-soft); }
 .pastors-desk h2 { font-size: 3.75rem; margin-bottom: 28px; }
-.pastors-desk blockquote { margin: 0 0 24px; color: var(--color-ink-soft); font-size: .875rem; line-height: 1.9; }
-.pastor-name { font-size: .6875rem; font-weight: 600; }
-.pastors-desk .text-link { font-size: .75rem; margin-top: 8px; }
+.pastors-desk blockquote { margin: 0 0 24px; color: var(--color-ink-soft); font-size: 1rem; line-height: 1.9; }
+.pastor-name { font-size: .875rem; font-weight: 600; }
+.pastors-desk .text-link { font-size: .8125rem; margin-top: 8px; }
 .article-preview { padding-top: 0; }
 .article-preview-grid { display: grid; grid-template-columns: 1fr 1.3fr; align-items: center; gap: 80px; }
-.article-preview img { width: 100%; height: 410px; object-fit: cover; border-radius: 18px; }
+/* The artwork has lettering baked in, so show the whole frame rather than cropping it. */
+.article-preview img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 18px; }
 .article-preview h2 { font-size: 3rem; }
-.article-preview h3 { font-family: var(--font-body); font-size: .8125rem; font-weight: 600; line-height: 1.5; color: var(--color-accent-dark); }
-.article-preview p:not(.section-eyebrow) { font-size: .875rem; color: var(--color-ink-soft); }
+.article-preview h3 { font-family: var(--font-body); font-size: .875rem; font-weight: 600; line-height: 1.5; color: var(--color-accent-dark); }
+.article-preview p:not(.section-eyebrow) { font-size: .9375rem; color: var(--color-ink-soft); }
 .article-preview .text-link { margin-top: 16px; }
 
 /* Visit and contact */
@@ -142,15 +143,15 @@
 .visit-card-copy { padding: 38px; }
 .visit-card-copy > svg { color: var(--color-accent); width: 26px; height: 26px; margin-bottom: 20px; }
 .visit-card h3 { font-size: 2.5rem; color: white; }
-.visit-card p { color: #d0c8d1; max-width: 360px; font-size: .875rem; }
-.visit-card .text-link { color: var(--color-accent); font-size: .75rem; margin-top: 8px; }
+.visit-card p { color: #d0c8d1; max-width: 360px; font-size: .9375rem; }
+.visit-card .text-link { color: var(--color-accent); font-size: .8125rem; margin-top: 8px; }
 .map-wrap { flex: 1; width: 100%; min-height: 240px; position: relative; background: #d9d7d3; }
 .map-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .contact-form-wrap { background: var(--color-surface); padding: 38px; border-radius: 20px; }
 .contact-form-wrap h3 { font-size: 2.5rem; margin-bottom: 8px; }
-.contact-form-wrap > p { color: var(--color-ink-soft); font-size: .8125rem; margin-bottom: 24px; }
+.contact-form-wrap > p { color: var(--color-ink-soft); font-size: .9375rem; margin-bottom: 24px; }
 .form-field { display: flex; flex-direction: column; margin-bottom: 17px; }
-.form-field label { font-size: .6875rem; font-weight: 600; margin-bottom: 7px; }
+.form-field label { font-size: .8125rem; font-weight: 600; margin-bottom: 7px; }
 .form-field input, .form-field textarea { width: 100%; padding: 11px 14px; border: 1px solid var(--color-border); background: var(--color-bg); border-radius: 8px; font-size: .875rem; color: var(--color-ink); }
 .form-field textarea { resize: vertical; min-height: 100px; }
 .contact-form-wrap .btn { width: 100%; }
@@ -201,13 +202,13 @@
   .hero-content { padding-top: 38px; padding-bottom: 22px; }
   .hero-image { object-position: 70% center; }
   .hero-scrim { background: linear-gradient(90deg, #211b27ed, #211b277a), linear-gradient(0deg, #211b27e0, transparent 80%); }
-  .hero-eyebrow { font-size: .5625rem; margin-bottom: 30px; }
+  .hero-eyebrow { font-size: .6875rem; margin-bottom: 30px; }
   .hero h1 { font-size: clamp(3.6rem, 12.4vw, 5.3rem); margin-bottom: 26px; }
   .hero-text { font-size: .8125rem; max-width: 315px; }
   .hero-actions { flex-wrap: wrap; gap: 20px; }
   .hero .btn { font-size: .75rem; }
-  .hero-bottom { margin-top: 34px; gap: 16px; font-size: .5625rem; justify-content: space-between; }
-  .hero-bottom a { max-width: 90px; line-height: 1.5; }
+  .hero-bottom { margin-top: 34px; gap: 16px; font-size: .75rem; justify-content: space-between; }
+  .hero-bottom a { white-space: nowrap; line-height: 1.5; }
   .hero-bottom a svg { flex-shrink: 0; }
   .visit-strip { gap: 20px 14px; }
   .visit-time { padding-left: 12px; }
@@ -239,13 +240,13 @@
   .pastors-desk-grid { padding: 32px 24px; gap: 40px; }
   .pastors-portrait { max-width: 330px; width: 100%; margin-inline: auto; }
   .pastors-desk h2 { font-size: 3rem; }
-  .article-preview img { height: 290px; }
   .contact-form-wrap, .visit-card-copy { padding: 28px; }
 }
 @media (max-width: 440px) {
   .visit-strip { grid-template-columns: 1fr; gap: 16px; }
   .visit-time { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0 0; border-left: 0; border-top: 1px solid var(--color-border); }
-  .visit-time strong { margin-top: 0; text-align: right; }
+  .visit-time strong { margin-top: 0; text-align: right; white-space: nowrap; }
+  .visit-time small { display: inline; margin-top: 0; }
   .sermons .sermon-grid { grid-template-columns: minmax(0, 1fr); }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .hero-bottom { gap: 8px; }
@@ -260,5 +261,5 @@
 .form-verification { margin-block: 20px 12px; }
 .form-verification .h-captcha { min-height: 144px; }
 .verification-retry { margin-top: 8px; padding: 8px 12px; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-bg); color: var(--color-ink); font-size: .8125rem; }
-.form-help { font-size: .75rem; color: var(--color-ink-soft); margin-bottom: 20px; }
+.form-help { font-size: .8125rem; color: var(--color-ink-soft); margin-bottom: 20px; }
 .contact-form-wrap .btn:disabled { opacity: .65; transform: none; cursor: wait; }
