@@ -5,7 +5,7 @@
 .branches-card h2 { font-size: 2rem; margin-bottom: 28px; }
 .branches-card ul { list-style: none; counter-reset: branches; }
 .branches-card li { display: flex; align-items: baseline; gap: 18px; padding-block: 18px; border-top: 1px solid #d8d0c3; color: var(--color-ink-soft); font-size: .875rem; counter-increment: branches; }
-.branches-card li::before { content: '0' counter(branches); color: var(--color-accent-dark); font-size: .625rem; }
+.branches-card li::before { content: '0' counter(branches); color: var(--color-accent-dark); font-size: .6875rem; }
 .pastors-section { background: #eeeae3; }
 .pastors-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
 .pastor-card { background: var(--color-surface); border-radius: 160px 160px 16px 16px; overflow: hidden; padding: 10px 10px 26px; text-align: center; border: 1px solid var(--color-border); }
